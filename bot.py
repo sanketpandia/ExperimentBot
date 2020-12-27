@@ -1,6 +1,11 @@
 import discord
 from discord.ext import commands
 import json
+from dotenv import load_dotenv
+
+env = load_dotenv(dotenv_path="./.env")
+
+import os
 
 client = commands.Bot(command_prefix=">")
 json_data = {}
@@ -60,9 +65,9 @@ def get_optimised_aircraft_string(aircraft_data):
     MTOW: {}                    MLW: {}
     V2: {}                      VS: {}
     Climb: 
-    5000: {}
-    15000: {}
-    24000: {}
+    5000ft: {}
+    15000ft: {}
+    24000ft: {}
     Mach climb: {}
     Cruise Speed: {}            Typical Range: {}
     Descent:
@@ -85,4 +90,4 @@ async def get_airplanes(ctx, args):
         await ctx.send(get_optimised_aircraft_string(json_data[aircraft]))
 
 
-client.run("NzkyNjg5MzE4MTE1Mjc4ODU4.X-hXdA.W8YtgHIkbu7PmOgjfoxP8INASaU")
+client.run(os.getenv("BOT_ID"))
