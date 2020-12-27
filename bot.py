@@ -24,9 +24,9 @@ keyword = "AIRCRAFT PERFORMANCE"
 def get_aircraft(message):
     aircrafts_listed = json_data["keys"]
     aircraft_flag = False
-
+    message = message.upper()
     for aircraft in aircrafts_listed:
-        if aircraft in message:
+        if aircraft.upper() in message:
             return aircraft
 
     return ""
@@ -75,9 +75,8 @@ def get_optimised_aircraft_string(aircraft_data):
     Approach / MCS: {}
     Landing Speed: {}
     Flap Speeds: {}
-    Checklists: {}
     """
-    return  aircraft_data_string.format(aircraft_data["Airplane"], aircraft_data["Ceiling"], aircraft_data["MTOW"], aircraft_data["MLW"],aircraft_data["V2"], aircraft_data["VS"], aircraft_data["Climb to 5000ft"], aircraft_data["Climb to 15000ft"],aircraft_data["Climb to 24000ft"], aircraft_data["Mach Climb"], aircraft_data["Cruise speed"], aircraft_data["Typical Range"],aircraft_data["Descend to 24000ft"], aircraft_data["Descend to 10000ft"], aircraft_data["Approach / MCS"],aircraft_data["Landing"], aircraft_data["Flaps at descend"], aircraft_data["IF Checklist"])
+    return  aircraft_data_string.format(aircraft_data["Airplane"], aircraft_data["Ceiling"], aircraft_data["MTOW"], aircraft_data["MLW"],aircraft_data["V2"], aircraft_data["VS"], aircraft_data["Climb to 5000ft"], aircraft_data["Climb to 15000ft"],aircraft_data["Climb to 24000ft"], aircraft_data["Mach Climb"], aircraft_data["Cruise speed"], aircraft_data["Typical Range"],aircraft_data["Descend to 24000ft"], aircraft_data["Descend to 10000ft"], aircraft_data["Approach / MCS"],aircraft_data["Landing"], aircraft_data["Flaps at descend"])
 
 
 @client.command(name="aircraft")
