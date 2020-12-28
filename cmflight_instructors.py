@@ -61,7 +61,7 @@ def get_instructor(instructor, pilots_array):
         if ("Flight Instructor" in pilot.keys()) and (pilot["Flight Instructor"] not in instructors) and ("NOT ACTIVE" not in pilot["Flight Instructor"]):
             instructors.append(pilot["Flight Instructor"])
     for person in instructors:
-        if instructor in person:
+        if instructor.upper() in person():
             return person
     return ""
 
@@ -90,10 +90,10 @@ def update_instructor(callsign, instructor):
         airtable.update(record_id, fields)
         return  str(callsign + " assigned to " + true_instructor)
     except:
-        return "Update unsuccessful. Try again or use Airtabls"
+        return "Update unsuccessful. Try again or use Airtable"
 
 def update_status(callsign, req_status):
-    STATUSES= ["In Progress", "Passed", "Not started", "Removed - no activity", "Closed - did not pass"]
+    STATUSES= ["In Progress", "Passed", "Not Started", "Removed - no activity", "Closed - did not pass"]
     true_status = ""
     pilot_data = get_table_unfiltered()
     for status in STATUSES:
@@ -110,4 +110,4 @@ def update_status(callsign, req_status):
         airtable.update(record_id, fields)
         return str(true_status + " assigned to " + callsign)
     except:
-        return "Update unsuccessful. Try again or use Airtabls"
+        return "Update unsuccessful. Try again or use Airtable"
