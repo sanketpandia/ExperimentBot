@@ -140,6 +140,6 @@ async def get_assigned(ctx, args):
     if len(flightlines) == 0:
         await ctx.send("Unable to find any assigned pilots to this region. Or might be something is wrong with me :cry:")
     else:
-        await ctx.send("Here are the pilots assigned to this region \n" + flightlines)
+        await ctx.send("Here are the pilots assigned to this region/ FI \n" + flightlines)
 
 client.run(os.getenv("BOT_ID"))
