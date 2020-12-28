@@ -61,7 +61,7 @@ def get_instructor(instructor, pilots_array):
         if ("Flight Instructor" in pilot.keys()) and (pilot["Flight Instructor"] not in instructors) and ("NOT ACTIVE" not in pilot["Flight Instructor"]):
             instructors.append(pilot["Flight Instructor"])
     for person in instructors:
-        if instructor.upper() in person():
+        if instructor.upper() in person.upper():
             return person
     return ""
 
