@@ -142,4 +142,26 @@ async def get_assigned(ctx, args):
     else:
         await ctx.send("Here are the pilots assigned to this region/ FI \n" + flightlines)
 
+@client.command(name="cm_assign")
+async def get_instructors(ctx, callsign, instructor):
+    flightlines = cm.update_instructor(callsign, instructor)
+    if len(flightlines) == 0:
+        await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(str(flightlines))
+
+@client.command(name="cm_update")
+async def get_instructors(ctx, *args):
+    if len(args) < 2:
+        await ctx.send("use the format >cm_update AFKLMxxx in progress")
+        return
+
+    status = " ".join(args[1:])
+
+    flightlines = cm.update_status(args[0], status)
+
+    if len(flightlines) == 0:
+        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(str(flightlines))
 client.run(os.getenv("BOT_ID"))
