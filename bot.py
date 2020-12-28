@@ -3,6 +3,7 @@ from discord.ext import commands
 import json
 import airtable_connection
 from dotenv import load_dotenv
+import cmflight_instructors as cm
 
 env = load_dotenv(dotenv_path="./.env")
 
@@ -116,6 +117,22 @@ async def get_cm_time(ctx, args):
         await ctx.send("Your record seems to be misplaced/ unavailable. Or might be something wrong with me :cry:")
     else:
         await ctx.send(flightlines)
+
+
+@client.command(name="cm_pirep")
+async def file_pirep(ctx, *args):
+    if len(args)==0:
+        await ctx.send("Use the format to file a CM Pirep: \nAFKLMxxx airline_KLM aircraft_B777-300ER route_EHAM-OMDB ft_06:30 pax_240 cargo_4500 fuel_35000")
+    else:
+        await ctx.send("Functionality not updated yet")
+
+@client.command(name="cm_unassigned")
+async def get_unassigned(ctx):
+    flightlines = cm.get_unassigned()
+    if len(flightlines) == 0:
+        await ctx.send("Unable to find any unassigned pilots. Or might be something is wrong with me :cry:")
+    else:
+        await ctx.send("Here are the unassigned pilots" + flightlines)
 
 
 client.run(os.getenv("BOT_ID"))
