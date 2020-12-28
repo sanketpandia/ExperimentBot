@@ -134,5 +134,12 @@ async def get_unassigned(ctx):
     else:
         await ctx.send("Here are the unassigned pilots" + flightlines)
 
+@client.command(name="cm_my_trainee")
+async def get_assigned(ctx, args):
+    flightlines = cm.get_typeratings_by_region(args)
+    if len(flightlines) == 0:
+        await ctx.send("Unable to find any assigned pilots to this region. Or might be something is wrong with me :cry:")
+    else:
+        await ctx.send("Here are the pilots assigned to this region \n" + flightlines)
 
 client.run(os.getenv("BOT_ID"))
