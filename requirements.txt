@@ -3,3 +3,4 @@ discord.py==1.5.1
 python-dotenv
 airtable-python-wrapper
 python-airtable
+python-dateutil
