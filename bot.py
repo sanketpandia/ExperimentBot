@@ -201,7 +201,7 @@ async def update_instructors_pa(ctx, *args):
     flightlines = pa.update_status(args[0], status)
 
     if len(flightlines) == 0:
-        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+        await ctx.send("Try using one of these statuses In Progress, Closed - Graduated, Contact to Schedule CF1, Closed - Did Not Complete, Removed - Inactivity")
     else:
         await ctx.send(str(flightlines))
 
