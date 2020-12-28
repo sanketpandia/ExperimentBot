@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+import airtable_connection
 from dotenv import load_dotenv
 
 env = load_dotenv(dotenv_path="./.env")
@@ -31,6 +32,7 @@ def get_aircraft(message):
 
     return ""
 
+
 def show_table(table):
     string = ''
     for line in table:
@@ -38,6 +40,7 @@ def show_table(table):
         string += '|\n'
 
     return string
+
 
 def get_aircraft_list_string():
     aircraft_listed = json_data["keys"]
@@ -59,6 +62,7 @@ def get_aircraft_list_string():
 
     return "Sorry I couldn't recognise it. Try one from this list\n" + aircraft_listed_str
 
+
 def get_optimised_aircraft_string(aircraft_data):
     aircraft_data_string = """
     **Aircraft**: {}                Flight Ceiling: {}
@@ -76,7 +80,14 @@ def get_optimised_aircraft_string(aircraft_data):
     Landing Speed: {}
     Flap Speeds: {}
     """
-    return  aircraft_data_string.format(aircraft_data["Airplane"], aircraft_data["Ceiling"], aircraft_data["MTOW"], aircraft_data["MLW"],aircraft_data["V2"], aircraft_data["VS"], aircraft_data["Climb to 5000ft"], aircraft_data["Climb to 15000ft"],aircraft_data["Climb to 24000ft"], aircraft_data["Mach Climb"], aircraft_data["Cruise speed"], aircraft_data["Typical Range"],aircraft_data["Descend to 24000ft"], aircraft_data["Descend to 10000ft"], aircraft_data["Approach / MCS"],aircraft_data["Landing"], aircraft_data["Flaps at descend"])
+    return aircraft_data_string.format(aircraft_data["Airplane"], aircraft_data["Ceiling"], aircraft_data["MTOW"],
+                                       aircraft_data["MLW"], aircraft_data["V2"], aircraft_data["VS"],
+                                       aircraft_data["Climb to 5000ft"], aircraft_data["Climb to 15000ft"],
+                                       aircraft_data["Climb to 24000ft"], aircraft_data["Mach Climb"],
+                                       aircraft_data["Cruise speed"], aircraft_data["Typical Range"],
+                                       aircraft_data["Descend to 24000ft"], aircraft_data["Descend to 10000ft"],
+                                       aircraft_data["Approach / MCS"], aircraft_data["Landing"],
+                                       aircraft_data["Flaps at descend"])
 
 
 @client.command(name="aircraft")
@@ -87,6 +98,24 @@ async def get_airplanes(ctx, args):
         await ctx.send(get_aircraft_list_string())
     else:
         await ctx.send(get_optimised_aircraft_string(json_data[aircraft]))
+
+
+@client.command(name="cm_flightlines")
+async def get_flightlines(ctx, args):
+    flightlines = airtable_connection.get_flightlines(args)
+    if len(flightlines) == 0:
+        await ctx.send("Art thou sure you have thy callsign correct?")
+    else:
+        await ctx.send("Here art thy flight lines: \n" + flightlines)
+
+
+@client.command(name="cm_time")
+async def get_cm_time(ctx, args):
+    flightlines = airtable_connection.get_time(args)
+    if len(flightlines) == 0:
+        await ctx.send("Your record seems to be misplaced/ unavailable. Or might be something wrong with me :cry:")
+    else:
+        await ctx.send(flightlines)
 
 
 client.run(os.getenv("BOT_ID"))
