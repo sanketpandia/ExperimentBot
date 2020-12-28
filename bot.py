@@ -4,7 +4,8 @@ import json
 import airtable_connection
 from dotenv import load_dotenv
 import cmflight_instructors as cm
-
+import bot_utils as utils
+import pilot_academy as pa
 env = load_dotenv(dotenv_path="./.env")
 
 import os
@@ -132,15 +133,15 @@ async def get_unassigned(ctx):
     if len(flightlines) == 0:
         await ctx.send("Unable to find any unassigned pilots. Or might be something is wrong with me :cry:")
     else:
-        await ctx.send("Here are the unassigned pilots" + flightlines)
+        await ctx.send("Here are the unassigned pilots\n" + flightlines)
 
 @client.command(name="cm_my_trainee")
 async def get_assigned(ctx, args):
     flightlines = cm.get_typeratings_by_region(args)
     if len(flightlines) == 0:
-        await ctx.send("Unable to find any assigned pilots to this region. Or might be something is wrong with me :cry:")
+        await ctx.send("Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
     else:
-        await ctx.send("Here are the pilots assigned to this region/ FI \n" + flightlines)
+        await ctx.send("Here are the pilots assigned to this region / FI \n" + flightlines)
 
 @client.command(name="cm_assign")
 async def get_instructors(ctx, callsign, instructor):
@@ -165,5 +166,61 @@ async def get_instructors(ctx, *args):
     else:
         await ctx.send(str(flightlines))
 
+@client.command(name="pa_unassigned")
+async def get_unassigned_pa(ctx):
+    flightlines = pa.get_unassigned()
+    if len(flightlines) == 0:
+        await ctx.send("Unable to find any unassigned pilots. Or might be something is wrong with me :cry:")
+    else:
+        await ctx.send("Here are the unassigned \n" + flightlines)
+
+@client.command(name="pa_my_trainee")
+async def get_assigned_pa(ctx, args):
+    flightlines = pa.get_typeratings_by_region(args)
+    if len(flightlines) == 0:
+        await ctx.send("Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
+    else:
+        await ctx.send("Here are the pilots assigned to this region/ FI \n" + flightlines)
+
+@client.command(name="pa_assign")
+async def assign_instructors_pa(ctx, callsign, instructor):
+    flightlines = pa.update_instructor(callsign, instructor)
+    if len(flightlines) == 0:
+        await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(str(flightlines))
+
+@client.command(name="pa_update")
+async def update_instructors_pa(ctx, *args):
+    if len(args) < 2:
+        await ctx.send("use the format >cm_update AFKLMxxx in progress")
+        return
+
+    status = " ".join(args[1:])
+
+    flightlines = pa.update_status(args[0], status)
+
+    if len(flightlines) == 0:
+        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(str(flightlines))
+
+@client.command(name="pa_cfupdate")
+async def update_instructors_pa(ctx, arg1, arg2, arg3):
+
+    flightlines = pa.update_cf(arg1, arg2, arg3)
+
+    if len(flightlines) == 0:
+        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(str(flightlines))
+@client.command(name="afklm_live")
+async def get_live_flights(ctx):
+    flightlines = utils.get_live()
+
+    if len(flightlines) == 0:
+        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(flightlines)
 
 client.run(os.getenv("BOT_ID"))
