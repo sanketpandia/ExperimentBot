@@ -31,7 +31,7 @@ def get_flightlines(callsign):
     for item in data:
         pilots_array.append(item["fields"])
     for item in pilots_array:
-        if callsign == item["Callsign"]:
+        if callsign.upper() in item["Callsign"].upper():
             routes = item["Assigned Routes"]
     answer_string = ""
     for item in routes: answer_string = answer_string + item + "\n"
