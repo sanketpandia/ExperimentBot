@@ -121,9 +121,12 @@ async def get_cm_time(ctx, args):
 
 
 @client.command(name="cm_pirep")
-async def file_pirep(ctx, *args):
+async def file_cm_pirep(ctx, *args):
+    await ctx.send("Here's your link for career mode pirep: https://airtable.com/shrYTRklbSY8L5pYI")
 
-    await ctx.send("Check the description of #career_mode_lounge for the link to pirep")
+@client.command(name="pirep")
+async def file_pirep(ctx, *args):
+    await ctx.send("Here's your link for career mode pirep: https://airtable.com/shru5XYHBMx1rnvVA")
 
 @client.command(name="cm_unassigned")
 async def get_unassigned(ctx):
