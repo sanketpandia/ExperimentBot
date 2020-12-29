@@ -122,10 +122,8 @@ async def get_cm_time(ctx, args):
 
 @client.command(name="cm_pirep")
 async def file_pirep(ctx, *args):
-    if len(args)==0:
-        await ctx.send("Use the format to file a CM Pirep: \nAFKLMxxx airline_KLM aircraft_B777-300ER route_EHAM-OMDB ft_06:30 pax_240 cargo_4500 fuel_35000")
-    else:
-        await ctx.send("Functionality not updated yet")
+
+    await ctx.send("Check the description of #career_mode_lounge for the link to pirep")
 
 @client.command(name="cm_unassigned")
 async def get_unassigned(ctx):
