@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 import cmflight_instructors as cm
 import bot_utils as utils
 import pilot_academy as pa
+import event_code as event
+
 env = load_dotenv(dotenv_path="./.env")
 
 import os
@@ -215,6 +217,15 @@ async def update_instructors_pa(ctx, arg1, arg2, arg3):
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(str(flightlines))
+@client.command(name="event")
+async def get_next_event(ctx):
+    flightlines = event.get_next_event()
+
+    if flightlines == "\n=========================\n":
+        await ctx.send("Sorry couldn't find any events")
+    else:
+        await ctx.send(flightlines)
+
 @client.command(name="afklm_live")
 async def get_live_flights(ctx):
     flightlines = utils.get_live()
@@ -223,5 +234,4 @@ async def get_live_flights(ctx):
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(flightlines)
-
 client.run(os.getenv("BOT_ID"))
