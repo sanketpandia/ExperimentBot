@@ -126,7 +126,7 @@ async def file_cm_pirep(ctx, *args):
 
 @client.command(name="pirep")
 async def file_pirep(ctx, *args):
-    await ctx.author.send("Here's your link for career mode pirep: https://airtable.com/shru5XYHBMx1rnvVA")
+    await ctx.author.send("Here's your link pirep: https://airtable.com/shru5XYHBMx1rnvVA")
 
 @client.command(name="cm_unassigned")
 async def get_unassigned(ctx):
