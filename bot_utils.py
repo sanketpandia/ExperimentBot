@@ -1,8 +1,7 @@
 import json
 import re
 
-with open('./flights.json',) as jsonf:
-    json_data = json.load(jsonf)
+
 
 def get_afklm_flights(flights):
     afklm_flights = []
