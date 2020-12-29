@@ -44,7 +44,7 @@ def get_time(callsign):
     for item in data:
         pilots_array.append(item["fields"])
     for item in pilots_array:
-        if callsign == item["Callsign"]:
+        if callsign.upper() in item["Callsign"].upper():
             times["cm_hours"] = item["Total CM Hours"]
             times["last_activity"] = item["Last activity in CM"]
             times["required_hours"] = item["Required hours to next aircraft"]
