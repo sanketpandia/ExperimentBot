@@ -62,6 +62,11 @@ def get_fpl_by_id(fpl_list, flight_id):
     return "No FPL Filed"
 
 
+def format_string(text, limit):
+    fixed_str = (text[:limit-1] + '.') if len(text) > limit else text
+    fixed_str = (fixed_str+ (limit-len(fixed_str)) * " ") if len(fixed_str) < limit else fixed_str
+    return fixed_str
+
 def get_flight_plans_and_flights():
     session_id = get_session_id()
     if session_id == "":
@@ -101,13 +106,17 @@ def get_afklm_flights(flights):
 
 def get_live():
     afklm_flights = get_flight_plans_and_flights()
-    response_string = "**__Callsign__**        |        **__IFC name__**       |       **__Aircraft__**       |       **__Livery__**       |       **__MSL__**       |       **__IAS__**      |      **__Route__**\n\n"
+    response_string = "```\n      Callsign       |  IFC name  |    Aircraft    |     Livery     |   MSL   |  IAS  | Route\n\n"
     for flight in afklm_flights:
-        string_pattern = "{}  |  {}  |  {}  |  {} |   {}ft  |  {}kts   |    {}\n"
+        string_pattern = "{} | {} | {} | {} | {}ft | {}kts | {}\n"
+        flight["callsign"] = format_string(flight["callsign"], 20)
+        flight["username"] = format_string(flight["username"], 10)
+        flight["aircraft"] = format_string(flight["aircraft"], 14)
+        flight["livery"] = format_string(flight["livery"], 14)
         response_string = response_string + string_pattern.format(flight["callsign"], flight["username"],
                                                                   flight["aircraft"], flight["livery"],
                                                                   flight["altitude"], flight["speed"], flight["route"])
-    return response_string
+    return response_string + "\n```"
 
 
 print(get_session_id())
