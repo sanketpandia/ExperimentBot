@@ -234,4 +234,14 @@ async def get_live_flights(ctx):
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(flightlines)
+
+@client.command(name="live_m")
+async def get_live_flights_mobile(ctx):
+    flightlines = utils.get_live_mobile()
+
+    if len(flightlines) == 0:
+        await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
+    else:
+        await ctx.send(flightlines)
+
 client.run(os.getenv("BOT_ID"))

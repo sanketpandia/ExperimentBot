@@ -118,5 +118,20 @@ def get_live():
                                                                   flight["altitude"], flight["speed"], flight["route"])
     return response_string + "\n```"
 
+def get_live_mobile():
+    afklm_flights = get_flight_plans_and_flights()
+    response_string = "```\n"
+    for flight in afklm_flights:
+        string_pattern = """
+        Callsign: {}
+        IFC Username: {}
+        Aircraft: {}
+        Livery: {}
+        Altitude: {}ft
+        Speed: {}kts
+        {}\n"""
+        response_string = response_string + string_pattern.format(flight["callsign"], flight["username"],
+                                                                  flight["aircraft"], flight["livery"],
+                                                                  flight["altitude"], flight["speed"], flight["route"])
+    return response_string + "\n```"
 
-print(get_session_id())
