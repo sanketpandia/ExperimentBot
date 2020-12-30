@@ -226,7 +226,7 @@ async def get_next_event(ctx):
     else:
         await ctx.send(flightlines)
 
-@client.command(name="afklm_live")
+@client.command(name="live")
 async def get_live_flights(ctx):
     flightlines = utils.get_live()
 

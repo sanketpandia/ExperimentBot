@@ -4,3 +4,5 @@ python-dotenv
 airtable-python-wrapper
 python-airtable
 python-dateutil
+requests
+csv

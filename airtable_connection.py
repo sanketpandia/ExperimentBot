@@ -1,10 +1,10 @@
 from airtable import Airtable
-from dotenv import load_dotenv
+
 import json
 import datetime
 from dateutil.parser import parse
 import math
-
+from dotenv import load_dotenv
 env = load_dotenv(dotenv_path="./.env")
 
 import os
