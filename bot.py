@@ -244,8 +244,5 @@ async def get_live_flights_mobile(ctx):
     else:
         await ctx.send(flightlines)
 
-@client.command(name="help")
-async def get_help():
-    await ctx.send(utils.get_help())
 
 client.run(os.getenv("BOT_ID"))
