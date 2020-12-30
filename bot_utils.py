@@ -135,3 +135,5 @@ def get_live_mobile():
                                                                   flight["altitude"], flight["speed"], flight["route"])
     return response_string + "\n```"
 
+def get_help():
+    return "Not Implemented yet"

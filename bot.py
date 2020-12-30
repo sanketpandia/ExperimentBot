@@ -226,7 +226,7 @@ async def get_next_event(ctx):
     else:
         await ctx.send(flightlines)
 
-@client.command(name="live")
+@client.command(name="live_small")
 async def get_live_flights(ctx):
     flightlines = utils.get_live()
 
@@ -235,7 +235,7 @@ async def get_live_flights(ctx):
     else:
         await ctx.send(flightlines)
 
-@client.command(name="live_m")
+@client.command(name="live")
 async def get_live_flights_mobile(ctx):
     flightlines = utils.get_live_mobile()
 
@@ -243,5 +243,9 @@ async def get_live_flights_mobile(ctx):
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(flightlines)
+
+@client.command(name="help")
+def get_help():
+    await ctx.send(utils.get_help())
 
 client.run(os.getenv("BOT_ID"))
