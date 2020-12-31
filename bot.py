@@ -244,5 +244,8 @@ async def get_live_flights_mobile(ctx):
     else:
         await ctx.send(flightlines)
 
+@client.command()
+async def say_it(ctx):
+    await ctx.send("```\nThe Experiment (Sanket Pandia) wishes you a Happy New Year. May this year be just the opposite of what 2020 was \n```")
 
 client.run(os.getenv("BOT_ID"))

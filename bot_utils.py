@@ -109,6 +109,8 @@ def get_live():
     response_string = "```\n      Callsign       |  IFC name  |    Aircraft    |     Livery     |   MSL   |  IAS  | Route\n\n"
     for flight in afklm_flights:
         string_pattern = "{} | {} | {} | {} | {}ft | {}kts | {}\n"
+        if flight["username"] == None:
+            flight["username"] = "IFC NA"
         flight["callsign"] = format_string(flight["callsign"], 20)
         flight["username"] = format_string(flight["username"], 10)
         flight["aircraft"] = format_string(flight["aircraft"], 14)
