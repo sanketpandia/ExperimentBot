@@ -267,6 +267,6 @@ async def get_learn_metar(ctx, args):
     if args.upper() == "METAR":
         await ctx.author.send("https://1drv.ms/w/s!AhDpGlu1NeuigQEQTk8GmHVo6lBo?e=wyikAW")
     else:
-        await ctx.send("Try using >help metar")
+        await ctx.send("Try using >learn metar")
 
 client.run(os.getenv("BOT_ID"))
