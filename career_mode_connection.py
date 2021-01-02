@@ -45,6 +45,8 @@ def get_next_routes(assigned_route, routes):
 def assign_routes_to_pilot(callsign, aircraft, hub):
     routes = get_routes()
     possible_routes = get_possible_routes(aircraft, hub, routes)
+
+    pilot_data = get_pilot_data(callsign)
     new_routes = get_next_routes()
     pass
 

@@ -126,9 +126,11 @@ async def get_cm_time(ctx, args):
 async def file_cm_pirep(ctx, *args):
     await ctx.author.send("Here's your link for career mode pirep: https://airtable.com/shrYTRklbSY8L5pYI")
 
+
 @client.command(name="pirep")
 async def file_pirep(ctx, *args):
     await ctx.author.send("Here's your link pirep: https://airtable.com/shru5XYHBMx1rnvVA")
+
 
 @client.command(name="cm_unassigned")
 async def get_unassigned(ctx):
@@ -138,13 +140,16 @@ async def get_unassigned(ctx):
     else:
         await ctx.send("Here are the unassigned pilots\n" + flightlines)
 
+
 @client.command(name="cm_my_trainee")
 async def get_assigned(ctx, args):
     flightlines = cm.get_typeratings_by_region(args)
     if len(flightlines) == 0:
-        await ctx.send("Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
+        await ctx.send(
+            "Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
     else:
         await ctx.send("Here are the pilots assigned to this region / FI \n" + flightlines)
+
 
 @client.command(name="cm_assign")
 async def get_instructors(ctx, callsign, instructor):
@@ -153,6 +158,7 @@ async def get_instructors(ctx, callsign, instructor):
         await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(str(flightlines))
+
 
 @client.command(name="cm_update")
 async def get_instructors(ctx, *args):
@@ -169,6 +175,7 @@ async def get_instructors(ctx, *args):
     else:
         await ctx.send(str(flightlines))
 
+
 @client.command(name="pa_unassigned")
 async def get_unassigned_pa(ctx):
     flightlines = pa.get_unassigned()
@@ -177,13 +184,16 @@ async def get_unassigned_pa(ctx):
     else:
         await ctx.send("Here are the unassigned \n" + flightlines)
 
+
 @client.command(name="pa_my_trainee")
 async def get_assigned_pa(ctx, args):
     flightlines = pa.get_typeratings_by_region(args)
     if len(flightlines) == 0:
-        await ctx.send("Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
+        await ctx.send(
+            "Unable to find any assigned pilots to this region/pilot. Or might be something is wrong with me :cry:")
     else:
         await ctx.send("Here are the pilots assigned to this region/ FI \n" + flightlines)
+
 
 @client.command(name="pa_assign")
 async def assign_instructors_pa(ctx, callsign, instructor):
@@ -192,6 +202,7 @@ async def assign_instructors_pa(ctx, callsign, instructor):
         await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(str(flightlines))
+
 
 @client.command(name="pa_update")
 async def update_instructors_pa(ctx, *args):
@@ -204,19 +215,22 @@ async def update_instructors_pa(ctx, *args):
     flightlines = pa.update_status(args[0], status)
 
     if len(flightlines) == 0:
-        await ctx.send("Try using one of these statuses In Progress, Closed - Graduated, Contact to Schedule CF1, Closed - Did Not Complete, Removed - Inactivity")
+        await ctx.send(
+            "Try using one of these statuses In Progress, Closed - Graduated, Contact to Schedule CF1, Closed - Did Not Complete, Removed - Inactivity")
     else:
         await ctx.send(str(flightlines))
 
+
 @client.command(name="pa_cfupdate")
 async def update_instructors_pa(ctx, arg1, arg2, arg3):
-
     flightlines = pa.update_cf(arg1, arg2, arg3)
 
     if len(flightlines) == 0:
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         await ctx.send(str(flightlines))
+
+
 @client.command(name="event")
 async def get_next_event(ctx):
     flightlines = event.get_next_event()
@@ -225,6 +239,7 @@ async def get_next_event(ctx):
         await ctx.send("Sorry couldn't find any events")
     else:
         await ctx.send(flightlines)
+
 
 @client.command(name="live_small")
 async def get_live_flights(ctx):
@@ -235,18 +250,23 @@ async def get_live_flights(ctx):
     else:
         await ctx.send(flightlines)
 
+
 @client.command(name="live")
 async def get_live_flights_mobile(ctx):
     flightlines = utils.get_live_mobile()
-    
+
     if len(flightlines) == 0:
         await ctx.send("Invalid callsign . Not Case sensitive. Try Again! :smile:")
     else:
         for live in flightlines:
             await ctx.send(live)
 
-@client.command(name="learn_metar")
-async def get_learn_metar(ctx):
-    await ctx.send("https://1drv.ms/w/s!AhDpGlu1NeuigQEQTk8GmHVo6lBo?e=wyikAW")
+
+@client.command(name="learn")
+async def get_learn_metar(ctx, args):
+    if args.upper() == "METAR":
+        await ctx.author.send("https://1drv.ms/w/s!AhDpGlu1NeuigQEQTk8GmHVo6lBo?e=wyikAW")
+    else:
+        await ctx.send("Try using >help metar")
 
 client.run(os.getenv("BOT_ID"))
