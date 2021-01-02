@@ -245,5 +245,8 @@ async def get_live_flights_mobile(ctx):
         for live in flightlines:
             await ctx.send(live)
 
+@client.command(name="learn_metar")
+async def get_learn_metar(ctx):
+    await ctx.send("https://1drv.ms/w/s!AhDpGlu1NeuigQEQTk8GmHVo6lBo?e=wyikAW")
 
 client.run(os.getenv("BOT_ID"))
