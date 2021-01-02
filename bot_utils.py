@@ -63,9 +63,10 @@ def get_fpl_by_id(fpl_list, flight_id):
 
 
 def format_string(text, limit):
-    fixed_str = (text[:limit-1] + '.') if len(text) > limit else text
-    fixed_str = (fixed_str+ (limit-len(fixed_str)) * " ") if len(fixed_str) < limit else fixed_str
+    fixed_str = (text[:limit - 1] + '.') if len(text) > limit else text
+    fixed_str = (fixed_str + (limit - len(fixed_str)) * " ") if len(fixed_str) < limit else fixed_str
     return fixed_str
+
 
 def get_flight_plans_and_flights():
     session_id = get_session_id()
@@ -120,8 +121,10 @@ def get_live():
                                                                   flight["altitude"], flight["speed"], flight["route"])
     return response_string + "\n```"
 
+
 def get_live_mobile():
     afklm_flights = get_flight_plans_and_flights()
+    responses = []
     response_string = "```\n"
     for flight in afklm_flights:
         string_pattern = """
@@ -132,10 +135,15 @@ def get_live_mobile():
         Altitude: {}ft
         Speed: {}kts
         {}\n"""
+        if len(response_string) >= 1800:
+            responses.append(response_string + "\n```")
+            response_string = "```\n"
         response_string = response_string + string_pattern.format(flight["callsign"], flight["username"],
                                                                   flight["aircraft"], flight["livery"],
                                                                   flight["altitude"], flight["speed"], flight["route"])
-    return response_string + "\n```"
+    responses.append(response_string + "\n```")
+    return responses
+
 
 def get_help():
     return "Not Implemented yet"

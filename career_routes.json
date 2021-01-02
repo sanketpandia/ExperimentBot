@@ -1,0 +1,2632 @@
+[
+    {
+        "id": "rec0nmW1okJGyRfn1",
+        "fields": {
+            "Rank": "B738 Route Set 2",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LFLB",
+                "LFLB-EHAM",
+                "EHAM-LFMN",
+                "LFMN-EHAM",
+                "EHAM-LERS",
+                "LERS-EHAM",
+                "EHAM-LYBE",
+                "LYBE-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM002"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:26.000Z"
+    },
+    {
+        "id": "rec0sHK6QVedbgzNo",
+        "fields": {
+            "Rank": "B738 Route set 5 LFPO",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFPO-GMFF",
+                "GMFF-LFPO",
+                "LFPO-LGSA",
+                "LGSA-LFPO",
+                "LFPO-LPFR",
+                "LPFR-LFPO",
+                "LFPO-LIBR",
+                "LIBR-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-07-02T13:11:47.000Z"
+    },
+    {
+        "id": "rec1Inbn3DFJpAVUs",
+        "fields": {
+            "Rank": "CRJ Route Set 1 LFML",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFML-LFST",
+                "LFST-LFML",
+                "LFML-LFRN",
+                "LFRN-LFML",
+                "LFML-LFRK",
+                "LFRK-LFML",
+                "LFML-LFLL",
+                "LFLL-LFML"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM015",
+                "AFKLM115",
+                "AFKLM005",
+                "AFKLM118",
+                "AFKLM106"
+            ],
+            "Hub": "LFML",
+            "Airline": [
+                "HOP"
+            ],
+            "Notes": "Last rework on 9-3-2020"
+        },
+        "createdTime": "2020-02-22T11:06:06.000Z"
+    },
+    {
+        "id": "rec2LVQi6jcxckP8I",
+        "fields": {
+            "Rank": "B777 Route Set 3 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-FGSL",
+                "FGSL-LFPG",
+                "LFPG-KDTW",
+                "KDTW-LFPG",
+                "LFPG-VOBL",
+                "VOBL-LFPG",
+                "LFPG-VHHH",
+                "VHHH-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM013",
+                "AFKLM936"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:41:33.000Z"
+    },
+    {
+        "id": "rec2V6qPTYknS10Ij",
+        "fields": {
+            "Rank": "B738 Route Set 5 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LDDU",
+                "LDDU-EHRD",
+                "EHRD-GCLP",
+                "GCLP-EHRD",
+                "EHRD-GMTT",
+                "GMTT-EHRD",
+                "EHRD-EGPH",
+                "EGPH-EHRD"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-05-07T19:52:19.000Z"
+    },
+    {
+        "id": "rec3OWoJgpy4xRLzT",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 1",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LIMC",
+                "LIMC-EHAM",
+                "EHAM-UUEE",
+                "UUEE-EHAM",
+                "EHAM-LFBO",
+                "LFBO-EHAM",
+                "EHAM-UKBB",
+                "UKBB-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM677"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-17T18:25:48.000Z"
+    },
+    {
+        "id": "rec3T5zImO1nnmdUn",
+        "fields": {
+            "Rank": "B738 Route Set 1",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LIPX",
+                "LIPX-EHAM",
+                "EHAM-EPKT",
+                "EPKT-EHAM",
+                "EHAM-LIEO",
+                "LIEO-EHAM",
+                "EHAM-LEMH",
+                "LEMH-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM136",
+                "AFKLM002"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-23T19:04:16.000Z"
+    },
+    {
+        "id": "rec3WnyychqDmD6ML",
+        "fields": {
+            "Rank": "A380 Route Set 2",
+            "Aircraft": "A380",
+            "Flight Lines": [
+                "LFPG-KLAX",
+                "KLAX-LFPG",
+                "LFPG-KJFK",
+                "KJFK-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:42:09.000Z"
+    },
+    {
+        "id": "rec3oXJHuyIKxBEmo",
+        "fields": {
+            "Rank": "B738 Route set 1 EHGG",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHGG-LEPA",
+                "LEPA-EHGG",
+                "EHGG-LPFR",
+                "LPFR-EHGG",
+                "EHGG-GCRR",
+                "GCRR-EHGG",
+                "EHGG-GCTS",
+                "GCTS-EHGG"
+            ],
+            "Hub": "EHGG",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-23T19:06:50.000Z"
+    },
+    {
+        "id": "rec5dF2rECks7Xicg",
+        "fields": {
+            "Rank": "B738 Route set 2 LFPO",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFPO-LGIR",
+                "LGIR-LFPO",
+                "LFPO-LIRN",
+                "LIRN-LFPO",
+                "LFPO-DTMB",
+                "DTMB-LFPO",
+                "LFPO-LGMK",
+                "LGMK-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-05-17T11:04:48.000Z"
+    },
+    {
+        "id": "rec6I0RdeFNlwDuxS",
+        "fields": {
+            "Rank": "B777F Route Set 5",
+            "Aircraft": "B777F",
+            "Flight Lines": [
+                "LFPG-KORD",
+                "KORD-EGPK",
+                "EGPK-LFPG",
+                "LFPG-MMMX",
+                "MMMX-KIAH",
+                "KIAH.LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM779"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-12-31T19:19:16.000Z"
+    },
+    {
+        "id": "rec7s2X5IVXAWpGj0",
+        "fields": {
+            "Rank": "CRJ Route Set 2 LFLL",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFLL-LFML",
+                "LFML-LFLL",
+                "LFLL-LFST",
+                "LFST-LFLL",
+                "LFLL-LFJL",
+                "LFJL-LFLL",
+                "LFLL-LFBO",
+                "LFBO-LFLL"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM207",
+                "AFKLM147"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-23T08:20:14.000Z"
+    },
+    {
+        "id": "rec8OJingpG6zzfnU",
+        "fields": {
+            "Rank": "B777F Route Set 3",
+            "Aircraft": "B777F",
+            "Flight Lines": [
+                "LFPG-HDAM",
+                "HDAM-FMEE",
+                "FMEE-FMMI",
+                "FMMI-HKJK",
+                "HKJK-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM779"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:42:34.000Z"
+    },
+    {
+        "id": "rec8t6l2SXywq96Sl",
+        "fields": {
+            "Rank": "B738 Route Set 7",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LGZA",
+                "LGZA-EHAM",
+                "EHAM-LPMA",
+                "LPMA-EHAM",
+                "EHAM-GCRR",
+                "GCRR-EHAM",
+                "EHAM-LPPT",
+                "LPPT-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:34.000Z"
+    },
+    {
+        "id": "rec9E3FZO8RTQjHSx",
+        "fields": {
+            "Rank": "B738 Route Set 4",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LOWI",
+                "LOWI-EHAM",
+                "EHAM-LJLJ",
+                "LJLJ-EHAM",
+                "EHAM-LIRP",
+                "LIRP-EHAM",
+                "EHAM-LEBL",
+                "LEBL-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM165",
+                "AFKLM002"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:30.000Z"
+    },
+    {
+        "id": "rec9VDe7OqVuUX3sR",
+        "fields": {
+            "Rank": "B738 Route set 1 LFPO",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFPO-EIDW",
+                "EIDW-LFPO",
+                "LFPO-EGPH",
+                "EGPH-LFPO",
+                "LFPO-LYTV",
+                "LYTV-LFPO",
+                "LFPO-GMFO",
+                "GMFO-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-02-23T19:07:44.000Z"
+    },
+    {
+        "id": "rec9yIMn2Thn1YxpK",
+        "fields": {
+            "Rank": "B738 Route Set 6",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LGTS",
+                "LGTS-EHAM",
+                "EHAM-GMMN",
+                "GMMN-EHAM",
+                "EHAM-LCLK",
+                "LCLK-EHAM",
+                "EHAM-EFHK",
+                "EFHK-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:33.000Z"
+    },
+    {
+        "id": "recA1kV0V8FxHO7uE",
+        "fields": {
+            "Rank": "CRJ Route Set 6 LFLL",
+            "Aircraft": "CRJ",
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-03-09T16:01:03.000Z"
+    },
+    {
+        "id": "recBYQ9dDldUYaEOD",
+        "fields": {
+            "Rank": "CRJ Route Set 4 LFLL",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFLL-LFRS",
+                "LFRS-LFLL",
+                "LFLL-LFBZ",
+                "LFBZ-LFLL",
+                "LFLL-LFRN",
+                "LFRN-LFLL",
+                "LFLL-LFLH",
+                "LFLH-LFLL"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-03-09T15:57:50.000Z"
+    },
+    {
+        "id": "recBgqVM1xLMHN2od",
+        "fields": {
+            "Rank": "B738 Route Set 3 LFPO",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFPO-LHBP",
+                "LHBP-LFPO",
+                "LFPO-LMML",
+                "LMML-LFPO",
+                "LFPO-LGRP",
+                "LGRP-LFPO",
+                "LFPO-GMMI",
+                "GMMI-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-05-28T09:40:48.000Z"
+    },
+    {
+        "id": "recCDGVnM60jJzFQQ",
+        "fields": {
+            "Rank": "ERJ190 Route Set 1",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-LSGG",
+                "LSGG-EHAM",
+                "EHAM-EGAC",
+                "EGAC-EHAM",
+                "EHAM-LFBD",
+                "LFBD-EHAM",
+                "EHAM-ENVA",
+                "ENVA-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM427",
+                "AFKLM777",
+                "AFKLM707",
+                "AFKLM300",
+                "AFKLM276",
+                "AFKLM272",
+                "AFKLM347",
+                "AFKLM009",
+                "AFKLM303",
+                "AFKLM251",
+                "AFKLM140",
+                "AFKLM103",
+                "AFKLM136",
+                "AFKLM226",
+                "AFKLM101",
+                "AFKLM124",
+                "AFKLM213",
+                "AFKLM167"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-17T18:25:48.000Z"
+    },
+    {
+        "id": "recCX9IMumQ3mlq6l",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 5",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LTFM",
+                "LTFM-EHAM",
+                "EHAM-ESSA",
+                "ESSA-EHAM",
+                "EHAM-ENGM",
+                "ENGM-EHAM",
+                "EHAM-LOWW",
+                "LOWW-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:13:40.000Z"
+    },
+    {
+        "id": "recD96cWyCVXxtDSn",
+        "fields": {
+            "Rank": "B78X Route Set 6",
+            "Aircraft": "B78X",
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:43:01.000Z"
+    },
+    {
+        "id": "recDnYtbULYMtz8tF",
+        "fields": {
+            "Rank": "ERJ190 Route Set 8",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EDDH",
+                "EDDH-EHAM",
+                "EHAM-EGNT",
+                "EGNT-EHAM",
+                "EHAM-EDDS",
+                "EDDS-EHAM",
+                "EHAM-EKYT",
+                "EKYT-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM272",
+                "AFKLM504"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T18:58:20.000Z"
+    },
+    {
+        "id": "recDpGbPxJnX6fEgn",
+        "fields": {
+            "Rank": "A350 Route Set 1",
+            "Aircraft": "A350",
+            "Flight Lines": [
+                "LFPG-GABS",
+                "GABS-LFPG",
+                "LFPG-CYYZ",
+                "CYYZ-LFPG",
+                "LFPG-VABB",
+                "VABB-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM333",
+                "AFKLM320",
+                "AFKLM148"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:01:05.000Z"
+    },
+    {
+        "id": "recEeZBQbeCNdwYnU",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 9",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-EGNT",
+                "EGNT-EHAM",
+                "EHAM-EKCH",
+                "EKCH-EHAM",
+                "EHAM-EDDM",
+                "EDDM-EHAM",
+                "EHAM-EGPH",
+                "EGPH-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:16:08.000Z"
+    },
+    {
+        "id": "recFrzHigj08vruKb",
+        "fields": {
+            "Rank": "A350 Route Set 2",
+            "Aircraft": "A350",
+            "Flight Lines": [
+                "LFPG-KIAD",
+                "KIAD-LFPG",
+                "LFPG-KATL",
+                "KATL-LFPG",
+                "LFPG-RKSI",
+                "RKSI-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM320"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:01:24.000Z"
+    },
+    {
+        "id": "recHKLjygv67ZIXZ3",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 10",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-EGGD",
+                "EGGD-EHAM",
+                "EHAM-LSGG",
+                "LSGG-EHAM",
+                "EHAM-LKPR",
+                "LKPR-EHAM",
+                "EHAM-ESGG",
+                "ESGG-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:22:42.000Z"
+    },
+    {
+        "id": "recI833affF4v6xMO",
+        "fields": {
+            "Rank": "A350 Route Set 4",
+            "Aircraft": "A350",
+            "Flight Lines": [
+                "LFPG-SBGR",
+                "SBGR-LFPG",
+                "LFPG-VABB",
+                "VABB-LFPG",
+                "LFPG-CYYZ",
+                "CYYZ-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM320"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-04-24T09:52:12.000Z"
+    },
+    {
+        "id": "recItrdm2uddz6H52",
+        "fields": {
+            "Rank": "B738 Route Set 8",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LEPA",
+                "LEPA-EHAM",
+                "EHAM-LIRN",
+                "LIRN-EHAM",
+                "EHAM-LEVC",
+                "LEVC-EHAM",
+                "EHAM-OMDB",
+                "OMDB-LBBG",
+                "LBBG-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:49.000Z"
+    },
+    {
+        "id": "recKL9c5NnGPinEX1",
+        "fields": {
+            "Rank": "CRJ Route set 2 LFBO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFBO-LFRS",
+                "LFRS-LFBO",
+                "LFBO-LFPO",
+                "LFPO-LFBO",
+                "LFBO-LFRN",
+                "LFRN-LFBO"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM835"
+            ],
+            "Hub": "LFBO",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-28T07:33:33.000Z"
+    },
+    {
+        "id": "recKUQRKS96ADrKWL",
+        "fields": {
+            "Rank": "Boeing 787 Route Set 5",
+            "Aircraft": "B787",
+            "Flight Lines": [
+                "EHAM-HKJK",
+                "HKJK-HTDA",
+                "HTDA-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:27:27.000Z"
+    },
+    {
+        "id": "recLcDIvv6dpzzVW9",
+        "fields": {
+            "Rank": "A320 Route Set 1",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LFKF",
+                "LFKF-LFPG",
+                "LFPG-LFBO",
+                "LFBO-LFPG",
+                "LFPG-LIMC",
+                "LIMC-LFPG",
+                "LFPG-EGCC",
+                "EGCC-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM444",
+                "AFKLM001"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:03:53.000Z"
+    },
+    {
+        "id": "recM78UvAhqDQNClr",
+        "fields": {
+            "Rank": "ERJ190 Route Set 2",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EGGD",
+                "EGGD-EHAM",
+                "EHAM-LFMN",
+                "LFMN-EHAM",
+                "EHAM-EBBR",
+                "EBBR-EHAM",
+                "EHAM-EDDW",
+                "EDDW-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM189",
+                "AFKLM272",
+                "AFKLM427",
+                "AFKLM777",
+                "AFKLM276",
+                "AFKLM347",
+                "AFKLM016",
+                "AFKLM251",
+                "AFKLM009",
+                "AFKLM136",
+                "AFKLM103",
+                "AFKLM226",
+                "AFKLM124",
+                "AFKLM101",
+                "AFKLM213"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-18T21:55:42.000Z"
+    },
+    {
+        "id": "recMXq3RbqjTFmQ73",
+        "fields": {
+            "Rank": "A320 Route Set 6",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-UUEE",
+                "UUEE-LFPG",
+                "LFPG-LGIR",
+                "LGIR-LFPG",
+                "LFPG-LROP",
+                "LROP-LFPG",
+                "LFPG-LIBD",
+                "LIBD-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-22T10:31:19.000Z"
+    },
+    {
+        "id": "recNk7kdx90KLWtrD",
+        "fields": {
+            "Rank": "B738 Route Set 2 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LICA",
+                "LICA-EHRD",
+                "EHRD-LOWI",
+                "LOWI-EHRD",
+                "EHRD-GCTS",
+                "GCTS-EHRD",
+                "EHRD-LEPA",
+                "LEPA-EHRD"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM217"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-03-09T16:38:51.000Z"
+    },
+    {
+        "id": "recNk9SRzun1C3ouD",
+        "fields": {
+            "Rank": "CRJ Route set 2 LFPO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFPO-LFBT",
+                "LFBT-LFPO",
+                "LFPO-LFTH",
+                "LFTH-LFPO",
+                "LFPO-LFBP",
+                "LFBP-LFPO",
+                "LFPO-LFCK",
+                "LFCK-LFPO"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM243",
+                "AFKLM380"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-23T08:22:51.000Z"
+    },
+    {
+        "id": "recO1LKoUB4HKkjLZ",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 4",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LIRN",
+                "LIRN-EHAM",
+                "EHAM-LGAV",
+                "LGAV-EHAM",
+                "EHAM-LROP",
+                "LROP-EHAM",
+                "EHAM-LEBL",
+                "LEBL-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-18T22:01:28.000Z"
+    },
+    {
+        "id": "recPNEgnQLRYzKw8f",
+        "fields": {
+            "Rank": "B78X Route Set 5",
+            "Aircraft": "B78X",
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:43:01.000Z"
+    },
+    {
+        "id": "recPZbnCadtFo9cK0",
+        "fields": {
+            "Rank": "B777F Route Set 4",
+            "Aircraft": "B777F",
+            "Flight Lines": [
+                "LFPG-VTBS",
+                "VTBS-LFPG",
+                "LFPG-RJAA",
+                "RJAA-LFPG",
+                "LFPG-KORD",
+                "KORD-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM779"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-12-27T11:29:57.000Z"
+    },
+    {
+        "id": "recQNDc0nLBoDAl8Y",
+        "fields": {
+            "Rank": "B738 Route set 3 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LEVC",
+                "LEVC-EHRD",
+                "EHRD-LICJ",
+                "LICJ-EHRD",
+                "EHRD-LIRP",
+                "LIRP-EHRD",
+                "EHRD-LGIR",
+                "LGIR-EHRD"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM217"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-04-24T09:50:32.000Z"
+    },
+    {
+        "id": "recS0TSybgMwn5u67",
+        "fields": {
+            "Rank": "B777 Route Set 1 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-FIMP",
+                "FIMP-LFPG",
+                "LFPG-KJFK",
+                "KJFK-LFPG",
+                "LFPG-MROC",
+                "MROC-LFPG",
+                "LFPG-FACT",
+                "FACT-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM176",
+                "AFKLM013",
+                "AFKLM936"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:39:22.000Z"
+    },
+    {
+        "id": "recS1xN1afsXCewHS",
+        "fields": {
+            "Rank": "ERJ190 Route Set 7",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EPGD",
+                "EPGD-EHAM",
+                "EHAM-ENBR",
+                "ENBR-EHAM",
+                "EHAM-LIPE",
+                "LIPE-EHAM",
+                "EHAM-LIRQ",
+                "LIRQ-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM504",
+                "AFKLM272",
+                "AFKLM136",
+                "AFKLM347",
+                "AFKLM140",
+                "AFKLM101"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T18:58:18.000Z"
+    },
+    {
+        "id": "recSsazh1uW3HJK1P",
+        "fields": {
+            "Rank": "ERJ190 Route Set 6",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-LIMJ",
+                "LIMJ-EHAM",
+                "EHAM-ENGM",
+                "ENGM-EHAM",
+                "EHAM-EPKK",
+                "EPKK-EHAM",
+                "EHAM-EGPE",
+                "EGPE-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM504",
+                "AFKLM272",
+                "AFKLM136",
+                "AFKLM347",
+                "AFKLM101",
+                "AFKLM140",
+                "AFKLM103"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T18:58:05.000Z"
+    },
+    {
+        "id": "recTjoLtOaVeiXSKg",
+        "fields": {
+            "Rank": "MD11F Route Set 4",
+            "Aircraft": "MD-11F",
+            "Flight Lines": [
+                "EHAM-FAOR",
+                "FAOR-FVRG",
+                "FVRG-HKJK",
+                "HKJK-EHAM",
+                "EHAM-KMIA",
+                "KMIA-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Martinair"
+            ]
+        },
+        "createdTime": "2020-02-19T19:54:33.000Z"
+    },
+    {
+        "id": "recTsOFS0sQbBkdRH",
+        "fields": {
+            "Rank": "ERJ190 Route Set 5",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EGLC",
+                "EGLC-EHAM",
+                "EHAM-EDDL",
+                "EDDL-EHAM",
+                "EHAM-EKBI",
+                "EKBI-EHAM",
+                "EHAM-LFMT",
+                "LFMT-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM504",
+                "AFKLM272",
+                "AFKLM777",
+                "AFKLM136",
+                "AFKLM140",
+                "AFKLM347",
+                "AFKLM101",
+                "AFKLM103"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:56:59.000Z"
+    },
+    {
+        "id": "recVqj5qzjDH4Lr1T",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 3",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "EHAM-WSSS",
+                "WSSS-WADD",
+                "WADD-WSSS",
+                "WSSS-EHAM",
+                "EHAM-OMDB",
+                "OMDB-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM156",
+                "AFKLM930",
+                "AFKLM265",
+                "AFKLM131",
+                "AFKLM666",
+                "AFKLM194",
+                "AFKLM012"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:01.000Z"
+    },
+    {
+        "id": "recWGdmeOaLEwNBYl",
+        "fields": {
+            "Rank": "B78X Route Set 2",
+            "Aircraft": "B78X",
+            "Flight Lines": [
+                "LFPG-KDTW",
+                "KDTW-LFPG",
+                "LFPG-RJBB",
+                "RJBB-LFPG",
+                "LFPG-KBOS",
+                "KBOS-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:43:01.000Z"
+    },
+    {
+        "id": "recWHWaLPHduyNhpQ",
+        "fields": {
+            "Rank": "ERJ190 Route Set 3",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EGBB",
+                "EGBB-EHAM",
+                "EHAM-LEBB",
+                "LEBB-EHAM",
+                "EHAM-EGSH",
+                "EGSH-EHAM",
+                "EHAM-ENTO",
+                "ENTO-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM004",
+                "AFKLM777",
+                "AFKLM276",
+                "AFKLM272",
+                "AFKLM016",
+                "AFKLM347",
+                "AFKLM140",
+                "AFKLM251",
+                "AFKLM504",
+                "AFKLM136",
+                "AFKLM009",
+                "AFKLM103",
+                "AFKLM101",
+                "AFKLM124",
+                "AFKLM226"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-18T21:55:48.000Z"
+    },
+    {
+        "id": "recWe71rxfargAdYX",
+        "fields": {
+            "Rank": "B738 Route set 6 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LOWK",
+                "LOWK-EHRD"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-05-07T19:55:03.000Z"
+    },
+    {
+        "id": "recXjz2zVnVLfyHbY",
+        "fields": {
+            "Aircraft": "B738",
+            "Hub": "LFRS",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-03-09T16:35:38.000Z"
+    },
+    {
+        "id": "recY8Syo63VqDELft",
+        "fields": {
+            "Rank": "B78X Route Set 3",
+            "Aircraft": "B78X",
+            "Flight Lines": [
+                "LFPG-SBFZ",
+                "SBFZ-LFPG",
+                "LFPG-KIAH",
+                "KIAH-LFPG",
+                "LFPG-SAEZ",
+                "SAEZ-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:43:01.000Z"
+    },
+    {
+        "id": "recYlUqyzptRewIOB",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 2",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LICC",
+                "LICC-EHAM",
+                "EHAM-LEMG",
+                "LEMG-EHAM",
+                "EHAM-EFHK",
+                "EFHK-EHAM",
+                "EHAM-LHBP",
+                "LHBP-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM677",
+                "AFKLM371"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-18T22:01:27.000Z"
+    },
+    {
+        "id": "recZ2DsJiFAHGKURC",
+        "fields": {
+            "Rank": "A350 Route Set 3",
+            "Aircraft": "A350",
+            "Flight Lines": [
+                "LFPG-FACT",
+                "FACT-LFPG",
+                "LFPG-VTBS",
+                "VTBS-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM320"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:01:52.000Z"
+    },
+    {
+        "id": "recZSeliDjyoeY4Bz",
+        "fields": {
+            "Rank": "CRJ Route Set 1 LFMN",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFMN-LFJL",
+                "LFJL-LFMN",
+                "LFMN-LFST",
+                "LFST-LFMN",
+                "LFMN-LFRN",
+                "LFRN-LFMN"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM015",
+                "AFKLM113"
+            ],
+            "Hub": "LFMN",
+            "Airline": [
+                "HOP"
+            ],
+            "Notes": "Last rework on 9-3-2020"
+        },
+        "createdTime": "2020-02-22T11:07:06.000Z"
+    },
+    {
+        "id": "recZgeczCE0iKohni",
+        "fields": {
+            "Rank": "A320 Route Set 7",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LHBP",
+                "LHBP-LFPG",
+                "LFPG-EDDH",
+                "EDDH-LFPG",
+                "LFPG-LFML",
+                "LFML-LFPG",
+                "LFPG-EDDM",
+                "EDDM-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:18:42.000Z"
+    },
+    {
+        "id": "reca2hL6QPNFUyk1n",
+        "fields": {
+            "Rank": "A320 Route Set 5",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LEMG",
+                "LEMG-LFPG",
+                "LFPG-ESSA",
+                "ESSA-LFPG",
+                "LFPG-LLBG",
+                "LLBG-LFPG",
+                "LFPG-UDYZ",
+                "UDYZ-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-22T10:29:36.000Z"
+    },
+    {
+        "id": "reca3m6Ls2f93V2OC",
+        "fields": {
+            "Rank": "A320 Route Set 4",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LIPE",
+                "LIPE-LFPG",
+                "LFPG-DTTA",
+                "DTTA-LFPG",
+                "LFPG-EPWA",
+                "EPWA-LFPG",
+                "LFPG-GMME",
+                "GMME-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:04:24.000Z"
+    },
+    {
+        "id": "recaoYD4maUoqe5n9",
+        "fields": {
+            "Rank": "MD11F Route Set 3",
+            "Aircraft": "MD-11F",
+            "Flight Lines": [
+                "EHAM-FAOR",
+                "FAOR-EHAM",
+                "EHAM-HTDA",
+                "HTDA-HKJK",
+                "HKJK-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Martinair"
+            ]
+        },
+        "createdTime": "2020-02-19T19:54:27.000Z"
+    },
+    {
+        "id": "recapsppN1CYsgbuD",
+        "fields": {
+            "Rank": "B738 Route set 1 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LSGG",
+                "LSGG-EHRD",
+                "EHRD-LPFR",
+                "LPFR-EHRD",
+                "EHRD-LEAL",
+                "LEAL-EHRD",
+                "EHRD-LPPT",
+                "LPPT-EHRD"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM217"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-23T19:05:54.000Z"
+    },
+    {
+        "id": "recaqonI1ChNzzYze",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 11",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-EGPD",
+                "EGPD-EHAM",
+                "EHAM-LFLL",
+                "LFLL-EHAM",
+                "EHAM-LLBG",
+                "LLBG-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:22:51.000Z"
+    },
+    {
+        "id": "recb85jieon0GigzW",
+        "fields": {
+            "Rank": "ERJ190 Route Set 9",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EDDN",
+                "EDDN-EHAM",
+                "EHAM-LFLL",
+                "LFLL-EHAM",
+                "EHAM-EDDC",
+                "EDDC-EHAM",
+                "EHAM-EGPF",
+                "EGPF-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM272"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-06-16T17:30:54.000Z"
+    },
+    {
+        "id": "reccBlCl9p5exzWKQ",
+        "fields": {
+            "Aircraft": "B777#2",
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-12-06T15:11:40.000Z"
+    },
+    {
+        "id": "reccJ9B5yDWVhExSW",
+        "fields": {
+            "Rank": "A320 Route Set 11",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LKPR",
+                "LKPR-LFPG",
+                "LFPG-ENGM",
+                "ENGM-LFPG",
+                "LFPG-LEPA",
+                "LEPA-LFPG",
+                "LFPG-EGBB",
+                "EGBB-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:22:29.000Z"
+    },
+    {
+        "id": "reccKjF91cJAFnCLs",
+        "fields": {
+            "Rank": "CRJ Route Set 2 LFML",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFML-LFRB",
+                "LFRB-LFML",
+                "LFML-LFST",
+                "LFST-LFML",
+                "LFML-LFBO",
+                "LFBO-LFML"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM115",
+                "AFKLM015",
+                "AFKLM118"
+            ],
+            "Hub": "LFML",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-22T11:10:08.000Z"
+    },
+    {
+        "id": "reccikDcnvpEcX8ZJ",
+        "fields": {
+            "Rank": "A380 Route Set 1",
+            "Aircraft": "A380",
+            "Flight Lines": [
+                "LFPG-MMMX",
+                "MMMX-LFPG",
+                "LFPG-ZSPD",
+                "ZSPD-LFPG",
+                "LFPG-KMIA",
+                "KMIA-LFPG",
+                "LFPG-FACT",
+                "FACT-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:40:50.000Z"
+    },
+    {
+        "id": "recd15YbCBjI319Sn",
+        "fields": {
+            "Rank": "B777 Route Set 6 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-KSFO",
+                "KSFO-LFPG",
+                "LFPG-RJTT",
+                "RJTT-LFPG",
+                "LFPG-SCEL",
+                "SCEL-LFPG",
+                "LFPG-WSSS",
+                "WSSS-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-04-28T16:24:25.000Z"
+    },
+    {
+        "id": "recdDQIXwmF0caBXw",
+        "fields": {
+            "Rank": "A320 Route Set 3",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LSZH",
+                "LSZH-LFPG",
+                "LFPG-LIML",
+                "LIML-LFPG",
+                "LFPG-LEBL",
+                "LEBL-LFPG",
+                "LFPG-DAAG",
+                "DAAG-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:04:24.000Z"
+    },
+    {
+        "id": "rece1lSFPZ9Z1wL1D",
+        "fields": {
+            "Rank": "CRJ Route set 1 LFBO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFBO-LFML",
+                "LFML-LFBO",
+                "LFBO-LFLL",
+                "LFLL-LFBO",
+                "LFBO-LFST",
+                "LFST-LFBO"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM201",
+                "AFKLM835"
+            ],
+            "Hub": "LFBO",
+            "Airline": [
+                "HOP"
+            ],
+            "Notes": "Last rework on 9-3-2020"
+        },
+        "createdTime": "2020-02-23T08:09:19.000Z"
+    },
+    {
+        "id": "rece4C5mijb5hFK3E",
+        "fields": {
+            "Rank": "CRJ Route Set 1 LFLL",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFLL-LFQQ",
+                "LFQQ-LFLL",
+                "LFLL-LIRF",
+                "LIRF-LFLL",
+                "LFLL-LKPR",
+                "LFKR-LFLL",
+                "LFLL-EBBR",
+                "EBBR-LFLL"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM147",
+                "AFKLM207",
+                "AFKLM113"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ],
+            "Notes": "Last rework on 9-3-2020"
+        },
+        "createdTime": "2020-02-22T11:07:22.000Z"
+    },
+    {
+        "id": "receEhiphFI3zpieq",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 3",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-ULLI",
+                "ULLI-EHAM",
+                "EHAM-LIRF",
+                "LIRF-EHAM",
+                "EHAM-LFMN",
+                "LFMN-EHAM",
+                "EHAM-LPPT",
+                "LPPT-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-18T22:01:21.000Z"
+    },
+    {
+        "id": "receU1cC92hJ8TuCS",
+        "fields": {
+            "Rank": "Boeing 787 Route Set 3",
+            "Aircraft": "B787",
+            "Flight Lines": [
+                "EHAM-ZUUU",
+                "ZUUU-EHAM",
+                "EHAM-KIAD",
+                "KIAD-EHAM",
+                "EHAM-RJAA",
+                "RJAA-EHAM",
+                "EHAM-KLAS",
+                "KLAS-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM666"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:38.000Z"
+    },
+    {
+        "id": "recfPlL2w3TEYjnZc",
+        "fields": {
+            "Rank": "ERJ190 Route Set 10",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-EDDV",
+                "EDDV-EHAM",
+                "EHAM-LDZA",
+                "LDZA-EHAM",
+                "EHAM-LFBO",
+                "LFBO-EHAM",
+                "EHAM-EGNM",
+                "EGNM-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM272"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-06-16T17:33:17.000Z"
+    },
+    {
+        "id": "recftpkrOvdp9Ydms",
+        "fields": {
+            "Rank": "B738 Route set 4 EHRD",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHRD-LEAM",
+                "LEAM-EHRD",
+                "EHRD-LFLS",
+                "LFLS-EHRD",
+                "EHRD-LDSP",
+                "LDSP-EHRD",
+                "EHRD-LHBP",
+                "LHBP-EHRD"
+            ],
+            "Hub": "EHRD",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-04-30T11:29:32.000Z"
+    },
+    {
+        "id": "recgWNndU48vSxI9Q",
+        "fields": {
+            "Rank": "B777 Route Set 2 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-MUHA",
+                "MUHA-LFPG",
+                "LFPG-DIAP",
+                "DIAP-LFPG",
+                "LFPG-CYVR",
+                "CYVR-NTAA",
+                "NTAA-CYVR",
+                "CYVR-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM013",
+                "AFKLM936"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:41:31.000Z"
+    },
+    {
+        "id": "recgqAIraIZjhN5CG",
+        "fields": {
+            "Rank": "B738 Route Set 5",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LOWS",
+                "LOWS-EHAM",
+                "EHAM-LEGE",
+                "LEGE-EHAM",
+                "EHAM-LYBE",
+                "LYBE-EHAM",
+                "EHAM-LEIB",
+                "LEIB-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:31.000Z"
+    },
+    {
+        "id": "rech93XniE5GbvGZd",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 5",
+            "Aircraft": "B777#2",
+            "Flight Lines": [
+                "EHAM-HTKJ",
+                "HTKJ-HTDA",
+                "HTDA-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:25:53.000Z"
+    },
+    {
+        "id": "rechSasEIPQgMeAD6",
+        "fields": {
+            "Rank": "CRJ Route Set 2 LFMN",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFMN-LFRK",
+                "LFRK-LFMN",
+                "LFMN-LFBZ",
+                "LFBZ-LFMN",
+                "LFMN-LFRB",
+                "LFRB-LFMN"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM113"
+            ],
+            "Hub": "LFMN",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-23T08:17:45.000Z"
+    },
+    {
+        "id": "rechpBplhrScqCH2p",
+        "fields": {
+            "Rank": "B777F Route Set 2",
+            "Aircraft": "B777F",
+            "Flight Lines": [
+                "LFPG-MMMX",
+                "MMMX-MMGL",
+                "MMGL-LFPG",
+                "LFPG-ZSPD",
+                "ZSPD-LFPG",
+                "LFPG-FTTJ",
+                "FTTJ-DXXX",
+                "DXXX-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM779"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:42:34.000Z"
+    },
+    {
+        "id": "rechznSCzJYdPgQuc",
+        "fields": {
+            "Rank": "CRJ Route set 4 LFPO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFPO-LFLL",
+                "LFLL-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-03-02T05:46:46.000Z"
+    },
+    {
+        "id": "reciHyluPQJpAmH9X",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 2",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "EHAM-VHHH",
+                "VHHH-EHAM",
+                "EHAM-FACT",
+                "FACT-EHAM",
+                "EHAM-MPTO",
+                "MPTO-EHAM",
+                "EHAM-RKSI",
+                "RKSI-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM930",
+                "AFKLM265",
+                "AFKLM131",
+                "AFKLM012",
+                "AFKLM194",
+                "AFKLM666",
+                "AFKLM114"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:52:50.000Z"
+    },
+    {
+        "id": "recjHdMPtnCatpKJY",
+        "fields": {
+            "Rank": "CRJ Route Set 5 LFLL",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFLL-LFRB",
+                "LFRB-LFLL",
+                "LFLL-LIMC",
+                "LIMC-LFLL",
+                "LFLL-LIPE",
+                "LIPE-LFLL"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-03-09T15:59:22.000Z"
+    },
+    {
+        "id": "recjYYw0mPCnzzXKR",
+        "fields": {
+            "Rank": "B738 Route Set 1 LFLL",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFLL-DAAG",
+                "DAAG-LFLL",
+                "LFLL-DTTA",
+                "DTTA-LFLL",
+                "LFLL-LPPT",
+                "LPPT-LFLL",
+                "LFLL-LGAV",
+                "LGAV-LFLL"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-02-23T19:08:51.000Z"
+    },
+    {
+        "id": "reclXmbFP8ziKJ6p6",
+        "fields": {
+            "Rank": "Boeing 787 Route Set 4",
+            "Aircraft": "B787",
+            "Flight Lines": [
+                "EHAM-ZSHC",
+                "ZSHC-EHAM",
+                "EHAM-KSFO",
+                "KSFO-EHAM",
+                "EHAM-VOBL",
+                "VOBL-EHAM",
+                "EHAM-RJBB",
+                "RJBB-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:45.000Z"
+    },
+    {
+        "id": "recmUOnM3LI8T5zvU",
+        "fields": {
+            "Rank": "ERJ190 Route Set 4",
+            "Aircraft": "ERJ190",
+            "Flight Lines": [
+                "EHAM-ESSL",
+                "ESSL-EHAM",
+                "EHAM-EPWA",
+                "EPWA-EHAM",
+                "EHAM-LEVC",
+                "LEVC-EHAM",
+                "EHAM-LPPR",
+                "LPPR-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM003",
+                "AFKLM504",
+                "AFKLM777",
+                "AFKLM272",
+                "AFKLM251",
+                "AFKLM140",
+                "AFKLM136",
+                "AFKLM347",
+                "AFKLM103",
+                "AFKLM101"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:56:48.000Z"
+    },
+    {
+        "id": "recmd5AAyCAscRz4p",
+        "fields": {
+            "Rank": "A320 Route Set 2",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LSGG",
+                "LSGG-LFPG",
+                "LFPG-EDDM",
+                "EDDM-LFPG",
+                "LFPG-LEBB",
+                "LEBB-LFPG",
+                "LFPG-EIDW",
+                "EIDW-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-19T20:04:24.000Z"
+    },
+    {
+        "id": "recnqQ3dKjvSxfNGr",
+        "fields": {
+            "Rank": "Boeing 787 Route Set 2",
+            "Aircraft": "B787",
+            "Flight Lines": [
+                "EHAM-SAEZ",
+                "SAEZ-EHAM",
+                "EHAM-KMSP",
+                "KMSP-EHAM",
+                "EHAM-SCEL",
+                "SCEL-EHAM",
+                "EHAM-VOBL",
+                "VOBL-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM014",
+                "AFKLM666"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:31.000Z"
+    },
+    {
+        "id": "recofwTW3LboEmShm",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 5",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "EHAM-RCTP",
+                "RCTP-EHAM",
+                "EHAM-MPTO",
+                "MPTO-EHAM",
+                "EHAM-SPJC",
+                "SPJC-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM131"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-10-14T09:48:20.000Z"
+    },
+    {
+        "id": "recp5dv5PHC683szt",
+        "fields": {
+            "Rank": "B738 Route set 4 LFPO",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFPO-GMAD",
+                "GMAD-LFPO",
+                "LFPO-BIKF",
+                "BIKF-LFPO",
+                "LFPO-GCFV",
+                "GCFV-LFPO",
+                "LFPO-DTTA",
+                "DTTA-LFPO"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-06-01T15:23:34.000Z"
+    },
+    {
+        "id": "recpqnMI3cI8kESHw",
+        "fields": {
+            "Rank": "B738 Route set 1 EHEH",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHEH-EKCH",
+                "EKCH-EHEH",
+                "EHEH-LEIB",
+                "LEIB-EHEH",
+                "EHEH-LPPT",
+                "LPPT-EHEH",
+                "EHEH-LLBG",
+                "LLBG-EHEH"
+            ],
+            "Hub": "EHEH",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-23T19:06:31.000Z"
+    },
+    {
+        "id": "recq8n7xKWeLWVjED",
+        "fields": {
+            "Rank": "A320 Route Set 12",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-EPWA",
+                "EPWA-LFPG",
+                "LFPG-LFBD",
+                "LFBD-LFPG",
+                "LFPG-LSGG",
+                "LSGG-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:22:30.000Z"
+    },
+    {
+        "id": "recqm1Lv11IEStNMG",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 6",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-ENBR",
+                "ENBR-EHAM",
+                "EHAM-LFML",
+                "LFML-EHAM",
+                "EHAM-EPWA",
+                "EPWA-EHAM",
+                "EHAM-LEMD",
+                "LEMD-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:15:46.000Z"
+    },
+    {
+        "id": "recrZVKwqFDquOfJW",
+        "fields": {
+            "Rank": "B777F Route Set 1",
+            "Aircraft": "B777F",
+            "Flight Lines": [
+                "LFPG-DRNN",
+                "DRNN-DNMM",
+                "DNMM-DGAA",
+                "DGAA-LFPG",
+                "LFPG-KORD",
+                "KORD-EIDW",
+                "EIDW-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM779"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:40:59.000Z"
+    },
+    {
+        "id": "recsQLevOEx3GFnZC",
+        "fields": {
+            "Rank": "B738 Route set 1 LFRS",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "LFRS-EDDB",
+                "EDDB-LFRS",
+                "LFRS-LIRF",
+                "LIRF-LFRS",
+                "LFRS-DTMB",
+                "DTMB-LFRS",
+                "LFRS-LMML",
+                "LMML-LFRS"
+            ],
+            "Hub": "LFRS",
+            "Airline": [
+                "Transavia France"
+            ]
+        },
+        "createdTime": "2020-02-23T19:08:08.000Z"
+    },
+    {
+        "id": "recskUDDycM3v4z1n",
+        "fields": {
+            "Rank": "B78X Route Set 4",
+            "Aircraft": "B78X",
+            "Flight Lines": [
+                "LFPG-KATL",
+                "KATL-LFPG",
+                "LFPG-DIAP",
+                "DIAP-LFPG",
+                "LFPG-SKBO",
+                "SKBO-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:43:01.000Z"
+    },
+    {
+        "id": "rect2F7kkYzyZzsX3",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 7",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LIPZ",
+                "LIPZ-EHAM",
+                "EHAM-LEAL",
+                "LEAL-EHAM",
+                "EHAM-EGLL",
+                "EGLL-EHAM",
+                "EHAM-EDDT",
+                "EDDT-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM274"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:15:47.000Z"
+    },
+    {
+        "id": "recudA05oeqwLgIU6",
+        "fields": {
+            "Rank": "B738 Route Set 3",
+            "Aircraft": "B738",
+            "Flight Lines": [
+                "EHAM-LGAV",
+                "LGAV-EHAM",
+                "EHAM-LPFR",
+                "LPFR-EHAM",
+                "EHAM-LEMG",
+                "LEMG-EHAM",
+                "EHAM-LICC",
+                "LICC-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM002"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Transavia"
+            ]
+        },
+        "createdTime": "2020-02-24T08:25:28.000Z"
+    },
+    {
+        "id": "recupdiSqGETnhSVF",
+        "fields": {
+            "Rank": "B78X Route Set 1",
+            "Aircraft": "B78X",
+            "Flight Lines": [
+                "LFPG-VRMM",
+                "VRMM-LFPG",
+                "LFPG-SEQM",
+                "SEQM-LFPG",
+                "LFPG-CYUL",
+                "CYUL-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:39:41.000Z"
+    },
+    {
+        "id": "recurAgH11V1qIvik",
+        "fields": {
+            "Rank": "CRJ Route set 1 LFPO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFPO-LFLC",
+                "LFLC-LFPO",
+                "LFPO-LFBH",
+                "LFBH-LFPO",
+                "LFPO-LFRQ",
+                "LFRQ-LFPO",
+                "LFPO-LFLL",
+                "LFLL-LFPO"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM015",
+                "AFKLM013",
+                "AFKLM197",
+                "AFKLM253",
+                "AFKLM230",
+                "AFKLM195",
+                "AFKLM123",
+                "AFKLM380",
+                "AFKLM243"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "HOP"
+            ],
+            "Notes": "Last rework on 9-3-2020"
+        },
+        "createdTime": "2020-02-22T11:07:40.000Z"
+    },
+    {
+        "id": "recvG2Tul3ot2dkE4",
+        "fields": {
+            "Rank": "B777 Route Set 4 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-CYVR",
+                "CYVR-LFPG",
+                "LFPG-FNLU",
+                "FNLU-LFPG",
+                "LFPG-SPJC",
+                "SPJC-LFPG",
+                "LFPG-VVTS",
+                "VVTS-LFPG"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM936"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-02-28T07:41:34.000Z"
+    },
+    {
+        "id": "recvSS1iJXIltI9Bj",
+        "fields": {
+            "Rank": "Boeing 787 Route Set 1",
+            "Aircraft": "B787",
+            "Flight Lines": [
+                "EHAM-VABB",
+                "VABB-EHAM",
+                "EHAM-SBGL",
+                "SBGL-EHAM",
+                "EHAM-ZBAA",
+                "ZBAA-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM238",
+                "AFKLM666",
+                "AFKLM014"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:10.000Z"
+    },
+    {
+        "id": "recvg79DRbl4lKnvb",
+        "fields": {
+            "Rank": "MD11F Route Set 2",
+            "Aircraft": "MD-11F",
+            "Flight Lines": [
+                "EHAM-SBKP",
+                "SBKP-SCEL",
+                "SCEL-SEQM",
+                "SEQM-KMIA",
+                "KMIA-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Martinair"
+            ]
+        },
+        "createdTime": "2020-02-19T19:54:23.000Z"
+    },
+    {
+        "id": "recwV1FvLpecFgNzY",
+        "fields": {
+            "Rank": "A320 Route Set 10",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-GMMN",
+                "GMMN-LFPG",
+                "LFPG-EGLL",
+                "EGLL-LFPG",
+                "LFPG-OJAI",
+                "OJAI-LFPG",
+                "LFPG-DAOO",
+                "DAOO-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:22:21.000Z"
+    },
+    {
+        "id": "recxSfE5PfXelNN5v",
+        "fields": {
+            "Rank": "B777 Route Set 5 AF",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "LFPG-SBGL",
+                "SBGL-LFPG",
+                "LFPG-KIAH",
+                "KIAH-LFPG",
+                "LFPG-VABB",
+                "VABB-LFPG",
+                "LFPG-ZSPD",
+                "ZSPD-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-04-21T12:45:08.000Z"
+    },
+    {
+        "id": "recxfMFe1pn7Pusun",
+        "fields": {
+            "Rank": "CRJ Route set 3 LFPO",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFPO-LFMP",
+                "LFMP-LFPO",
+                "LFPO-LFBT",
+                "LFBT-LFPO",
+                "LFPO-LFLW",
+                "LFLW-LFPO",
+                "LFPO-LFMT",
+                "LFMT-LFPO"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM123",
+                "AFKLM380"
+            ],
+            "Hub": "LFPO",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-28T07:29:33.000Z"
+    },
+    {
+        "id": "recy0yVbh8IrniGLI",
+        "fields": {
+            "Rank": "Boeing 737 Route Set 8",
+            "Aircraft": "B737",
+            "Flight Lines": [
+                "EHAM-LFPG",
+                "LFPG-EHAM",
+                "EHAM-EGCC",
+                "EGCC-EHAM",
+                "EHAM-EKBI",
+                "EKBI-EHAM",
+                "EHAM-LSZH",
+                "LSZH-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-20T20:15:49.000Z"
+    },
+    {
+        "id": "recyiBmiBKMS4NWj0",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 4",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "EHAM-FAOR",
+                "FAOR-EHAM",
+                "EHAM-SEQM",
+                "SEQM-SEGU",
+                "SEGU-EHAM",
+                "EHAM-KLAX",
+                "KLAX-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM131",
+                "AFKLM265",
+                "AFKLM194"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:07.000Z"
+    },
+    {
+        "id": "recyqn2XFT6WieD9X",
+        "fields": {
+            "Rank": "CRJ Route Set 3 LFLL",
+            "Aircraft": "CRJ",
+            "Flight Lines": [
+                "LFLL-LFPO",
+                "LFPO-LFLL",
+                "LFLL-LFBD",
+                "LFBD-LFLL",
+                "LFLL-LFKB",
+                "LFKB-LFLL",
+                "LFLL-LFBP",
+                "LFBP-LFLL"
+            ],
+            "Hub": "LFLL",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-02-28T07:27:00.000Z"
+    },
+    {
+        "id": "recz8K7DPsqSTIPWt",
+        "fields": {
+            "Rank": "A320 Route Set 9",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-LFLL",
+                "LFLL-LFPG",
+                "LFPG-EHAM",
+                "EHAM-LFPG",
+                "LFPG-LYBE",
+                "LYBE-LFPG",
+                "LFPG-EGNT",
+                "EGNT-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:22:06.000Z"
+    },
+    {
+        "id": "reczQqGbZvPO92B5Y",
+        "fields": {
+            "Rank": "Boeing 777 Route Set 1",
+            "Aircraft": "B777",
+            "Flight Lines": [
+                "EHAM-VTBS",
+                "VTBS-EHAM",
+                "EHAM-WMKK",
+                "WMKK-WIII",
+                "WIII-WMKK",
+                "WMKK-EHAM",
+                "EHAM-KJFK",
+                "KJFK-EHAM"
+            ],
+            "Pilots assigned routes": [
+                "AFKLM156",
+                "AFKLM930",
+                "AFKLM265",
+                "AFKLM131",
+                "AFKLM194",
+                "AFKLM114"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "KLM"
+            ]
+        },
+        "createdTime": "2020-02-19T19:52:09.000Z"
+    },
+    {
+        "id": "reczTTgQWNv86Lcie",
+        "fields": {
+            "Rank": "MD11F Route Set 1",
+            "Aircraft": "MD-11F",
+            "Flight Lines": [
+                "EHAM-SKBO",
+                "SKBO-KMIA",
+                "KMIA-EGSS",
+                "EGSS-EHAM",
+                "EHAM-HECA",
+                "HECA-HKJK",
+                "HKJK-EHAM"
+            ],
+            "Hub": "EHAM",
+            "Airline": [
+                "Martinair"
+            ]
+        },
+        "createdTime": "2020-02-19T19:53:54.000Z"
+    },
+    {
+        "id": "reczZBbi92jTmjaFZ",
+        "fields": {
+            "Aircraft": "CRJ",
+            "Hub": "LFMN",
+            "Airline": [
+                "HOP"
+            ]
+        },
+        "createdTime": "2020-04-09T12:00:46.000Z"
+    },
+    {
+        "id": "reczuASnL5DRPoMZu",
+        "fields": {
+            "Rank": "A320 Route Set 8",
+            "Aircraft": "A320",
+            "Flight Lines": [
+                "LFPG-GMMX",
+                "GMMX-LFPG",
+                "LFPG-LFRS",
+                "LFRS-LFPG",
+                "LFPG-LIRQ",
+                "LIRQ-LFPG",
+                "LFPG-LFMT",
+                "LFMT-LFPG"
+            ],
+            "Hub": "LFPG",
+            "Airline": [
+                "Air France"
+            ]
+        },
+        "createdTime": "2020-03-09T15:19:02.000Z"
+    }
+]
