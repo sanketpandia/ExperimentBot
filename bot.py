@@ -265,7 +265,7 @@ async def get_live_flights_mobile(ctx):
 @client.command(name="learn")
 async def get_learn_metar(ctx, args):
     if args.upper() == "METAR":
-        await ctx.author.send("https://1drv.ms/w/s!AhDpGlu1NeuigQEQTk8GmHVo6lBo?e=wyikAW")
+        await ctx.author.send("https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG")
     else:
         await ctx.send("Try using >learn metar")
 

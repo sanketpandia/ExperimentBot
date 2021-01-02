@@ -39,7 +39,15 @@ def get_possible_routes(aircraft, hub, routes):
 
 
 def get_next_routes(assigned_route, routes):
-    pass
+    route_index = 0
+    for route in routes:
+        index = 0
+        while index < len(assigned_route):
+            if assigned_route[index] == routes[route_index] and not(route_index == (len(routes) - 1)):
+                return routes[index] + 1
+    else:
+        return "Something went wrong"
+
 
 
 def assign_routes_to_pilot(callsign, aircraft, hub):
