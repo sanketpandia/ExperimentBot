@@ -269,4 +269,14 @@ async def get_learn_metar(ctx, args):
     else:
         await ctx.send("Try using >learn metar")
 
+@client.command(name="wt3")
+async def get_learn_metar(ctx, args):
+    if args.upper() == "WEBSITE":
+        await ctx.author.send("https://www.if-airfranceklmva.com/worldtour-383119.html")
+    elif args.upper() == "ROUTES":
+        await ctx.author.send("https://airtable.com/shrFU6ORS5fazxMOA")
+    else:
+        await ctx.send("Try using >wt3 routes or >wt3 website")
+
+
 client.run(os.getenv("BOT_ID"))
