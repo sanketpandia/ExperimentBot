@@ -297,5 +297,15 @@ async def get_live_flights_mobile(ctx):
 
     await ctx.send(flightlines)
 
+@client.command()
+async def afklm_help(ctx):
+    role_names = [role.name for role in ctx.author.roles]
+    help_response = utils.get_help(role_names)
+    if help_response[1] == "":
+        await ctx.send(help_response[0])
+    else:
+        await ctx.send(help_response[0])
+        await ctx.author.send(help_response[1])
+
 
 client.run(os.getenv("BOT_ID"))

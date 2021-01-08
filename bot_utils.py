@@ -188,5 +188,16 @@ def get_learn_url(args):
             return [learn_commands[key], learn_commands]
     return ["",learn_keys]
 
-def get_help():
-    return "Not Implemented yet"
+def get_help(roles):
+    admins = bot_controls["adminRoles"]
+    help_stuff = "Here are the available commands:\n" + "\n".join(bot_controls["help"]) + "\n"
+    admin_help_stuff = "Here are the available admin commands. Please don't reveal them to normal folk:\n" + "\n".join(bot_controls["admin_help"])
+    admin_flag = False
+
+    for admin in admins:
+        if admin in roles:
+            admin_flag = True
+    if admin_flag:
+        return [help_stuff, admin_help_stuff]
+    else:
+        return [help_stuff, ""]

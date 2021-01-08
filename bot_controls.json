@@ -3,6 +3,36 @@
   "learn": {
     "metar": "https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG",
     "checklists": "https://1drv.ms/b/s!AhDpGlu1NeuigQUQIRHeuwy7ydOm?e=hgqO7K"
+  },
+  "adminRoles": ["staff", "flightinstructor", "cxo"],
+  "help": [
+    "***__This are the available commands for the AFKLM bot__***",
+    "**>learn metar**: DMs you the specific document to you. Any topic required. Write x to see all available topics",
+    "**>pirep**: DMs you the link to file a PIREP",
+    "**>cm_pirep**: DMs you the link to file a career mode PIREP",
+    "**>cm_time AFKLMxxx**: Shows you the time and stats in your Career Mode",
+    "**>cm_flightlines AFKLMxxx**: Shows you your upcoming flight lines in Career Mode",
+    "**>aircraft A320-200**: Shows you the aircraft performances. you can type x as aircraft name to see all available aircrafts",
+    "**>live**: Lists all AFKLM pilots flying currently in a mobile friendly format",
+    "**>live_small**: Lists all AFKLM pilots currently flying in a PC friendly format",
+    "**>wt3 website**: >wt3 website for website link and >wt3 routes for routes link",
+    "**>ifatc**: Lists all active ATC in the expert server",
+    "**>ifatc_afklm**: Lists all AFKLM IFATC controlling currently in Expert server"
+  ],
+  "admin_help": [
+    "***__This are the available commands for the AFKLM bot for an admin. Substitute Emiel's name for your or your region, and the callsign accordingly__***",
+    "***__These commands will auto update the airtable. Have fun__***",
+    "**>cm_unassigned**: Returns all the pilots in the CM academy and haven't been assigned",
+    "**>cm_my_trainee Emiel**: Returns the pilots in the CM academy who have been assigned to Emiel",
+    "**>cm_assign AFKLM001 Emiel**: Assigns AFKLM001 to a Emiel in CM academy",
+    "**>cm_update AFKLM001 fail**: Updates the status of AFKLM001 in CM academy",
+    "**>pa_unassigned**: Returns all pilots in Pilot Academy who haven't been assigned an instructor",
+    "**>pa_my_trainee Emiel**: Lists pilots assigned to Emiel in Pilot academy",
+    "**>pa_assign AFKLM001 <Contact to Schedule CF1>**: Updates the status of AFKLM001 in the airtable to Contact to Schedule CF1",
+    "**>pa_cfupdate AFKLM001 CF1 Pass**: updates the CF1 status of AFKLM001 to pass in the airtable",
+    "**>event**: Lists all upcoming events from airtable calendar"
+  ],
+  "role_restrict": {
+    "": ""
   }
-
 }
