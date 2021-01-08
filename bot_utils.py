@@ -180,18 +180,21 @@ def get_ifatc():
         return "```\nNo active ATC found\n```"
     return active_pilots + "```"
 
+
 def get_learn_url(args):
     learn_commands = bot_controls["learn"]
     learn_keys = learn_commands.keys()
     for key in learn_keys:
         if key.upper() in args.upper():
             return [learn_commands[key], learn_commands]
-    return ["",learn_keys]
+    return ["", learn_keys]
+
 
 def get_help(roles):
     admins = bot_controls["adminRoles"]
     help_stuff = "Here are the available commands:\n" + "\n".join(bot_controls["help"]) + "\n"
-    admin_help_stuff = "Here are the available admin commands. Please don't reveal them to normal folk:\n" + "\n".join(bot_controls["admin_help"])
+    admin_help_stuff = "Here are the available admin commands. Please don't reveal them to normal folk:\n" + "\n".join(
+        bot_controls["admin_help"])
     admin_flag = False
 
     for admin in admins:
@@ -201,3 +204,19 @@ def get_help(roles):
         return [help_stuff, admin_help_stuff]
     else:
         return [help_stuff, ""]
+
+
+def validate_role(command, user_role):
+    role_restrictions = bot_controls["role_restrict"]
+    admin_flag = False
+    if command not in role_restrictions.keys():
+        return [True,""]
+    else:
+        for admin in role_restrictions[command]:
+            if admin in user_role:
+                admin_flag = True
+        if admin_flag:
+            return [True, ""]
+        else:
+
+            return [False, "\nYou don't have the required authorisation. You need to have the role of " + " or ".join(role_restrictions[command]) + " to be able to use these commands"]

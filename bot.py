@@ -106,6 +106,11 @@ async def get_airplanes(ctx, args):
 
 @client.command(name="cm_flightlines")
 async def get_flightlines(ctx, args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_flightlines", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = airtable_connection.get_flightlines(args)
     if len(flightlines) == 0:
         await ctx.send("Art thou sure you have thy callsign correct?")
@@ -115,6 +120,11 @@ async def get_flightlines(ctx, args):
 
 @client.command(name="cm_time")
 async def get_cm_time(ctx, args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_time", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = airtable_connection.get_time(args)
     if len(flightlines) == 0:
         await ctx.send("Your record seems to be misplaced/ unavailable. Or might be something wrong with me :cry:")
@@ -124,6 +134,11 @@ async def get_cm_time(ctx, args):
 
 @client.command(name="cm_pirep")
 async def file_cm_pirep(ctx, *args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_pirep", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     await ctx.author.send("Here's your link for career mode pirep: https://airtable.com/shrYTRklbSY8L5pYI")
 
 
@@ -134,6 +149,11 @@ async def file_pirep(ctx, *args):
 
 @client.command(name="cm_unassigned")
 async def get_unassigned(ctx):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_unassigned", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = cm.get_unassigned()
     if len(flightlines) == 0:
         await ctx.send("Unable to find any unassigned pilots. Or might be something is wrong with me :cry:")
@@ -143,6 +163,11 @@ async def get_unassigned(ctx):
 
 @client.command(name="cm_my_trainee")
 async def get_assigned(ctx, args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_my_trainee", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = cm.get_typeratings_by_region(args)
     if len(flightlines) == 0:
         await ctx.send(
@@ -153,6 +178,11 @@ async def get_assigned(ctx, args):
 
 @client.command(name="cm_assign")
 async def get_instructors(ctx, callsign, instructor):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_assign", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = cm.update_instructor(callsign, instructor)
     if len(flightlines) == 0:
         await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
@@ -162,6 +192,11 @@ async def get_instructors(ctx, callsign, instructor):
 
 @client.command(name="cm_update")
 async def get_instructors(ctx, *args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("cm_update", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     if len(args) < 2:
         await ctx.send("use the format >cm_update AFKLMxxx in progress")
         return
@@ -178,6 +213,11 @@ async def get_instructors(ctx, *args):
 
 @client.command(name="pa_unassigned")
 async def get_unassigned_pa(ctx):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("pa_unassigned", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = pa.get_unassigned()
     if len(flightlines) == 0:
         await ctx.send("Unable to find any unassigned pilots. Or might be something is wrong with me :cry:")
@@ -187,6 +227,11 @@ async def get_unassigned_pa(ctx):
 
 @client.command(name="pa_my_trainee")
 async def get_assigned_pa(ctx, args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("pa_my_trainee", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = pa.get_typeratings_by_region(args)
     if len(flightlines) == 0:
         await ctx.send(
@@ -197,6 +242,11 @@ async def get_assigned_pa(ctx, args):
 
 @client.command(name="pa_assign")
 async def assign_instructors_pa(ctx, callsign, instructor):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("pa_assign", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = pa.update_instructor(callsign, instructor)
     if len(flightlines) == 0:
         await ctx.send("Invalid instructor name. Try using your name. Not Case sensitive. Try Again! :smile:")
@@ -206,6 +256,11 @@ async def assign_instructors_pa(ctx, callsign, instructor):
 
 @client.command(name="pa_update")
 async def update_instructors_pa(ctx, *args):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("pa_update", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     if len(args) < 2:
         await ctx.send("use the format >cm_update AFKLMxxx in progress")
         return
@@ -223,6 +278,11 @@ async def update_instructors_pa(ctx, *args):
 
 @client.command(name="pa_cfupdate")
 async def update_instructors_pa(ctx, arg1, arg2, arg3):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("pa_cfupdate", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = pa.update_cf(arg1, arg2, arg3)
 
     if len(flightlines) == 0:
@@ -233,6 +293,11 @@ async def update_instructors_pa(ctx, arg1, arg2, arg3):
 
 @client.command(name="event")
 async def get_next_event(ctx):
+    role_names = [role.name for role in ctx.author.roles]
+    validated_role = utils.validate_role("event", role_names)
+    if not validated_role[0]:
+        await ctx.send(validated_role[1])
+        return
     flightlines = event.get_next_event()
 
     if flightlines == "\n=========================\n":

@@ -33,6 +33,18 @@
     "**>event**: Lists all upcoming events from airtable calendar"
   ],
   "role_restrict": {
-    "": ""
+    "cm_update": ["flightinstructor", "cxo"],
+    "cm_unassigned": ["flightinstructor", "cxo"],
+    "cm_my_trainee": ["flightinstructor", "cxo"],
+    "cm_assign": ["flightinstructor", "cxo"],
+    "cm_update":["flightinstructor", "cxo"],
+    "pa_unassigned": ["flightinstructor", "cxo"],
+    "pa_my_trainee": ["flightinstructor", "cxo"],
+    "pa_assign": ["flightinstructor", "cxo"],
+    "pa_cfupdate": ["flightinstructor", "cxo"],
+    "event": ["events", "cxo"],
+    "cm_pirep": ["careermode", "cxo"],
+    "cm_time": ["careermode", "cxo"],
+    "cm_flightlines": ["careermode", "cxo"]
   }
 }
