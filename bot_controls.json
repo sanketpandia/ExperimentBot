@@ -4,7 +4,7 @@
     "metar": "https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG",
     "checklists": "https://1drv.ms/b/s!AhDpGlu1NeuigQUQIRHeuwy7ydOm?e=hgqO7K"
   },
-  "adminRoles": ["staff", "flightinstructor", "cxo"],
+  "adminRoles": ["staff", "flightinstructor", "cxo", "events"],
   "help": [
     "***__This are the available commands for the AFKLM bot__***",
     "**>learn metar**: DMs you the specific document to you. Any topic required. Write x to see all available topics",
