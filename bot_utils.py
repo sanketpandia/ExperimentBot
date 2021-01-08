@@ -209,7 +209,6 @@ def get_help(roles):
 def validate_role(command, user_role):
     role_restrictions = bot_controls["role_restrict"]
     admin_flag = False
-    print(user_role)
     if command not in role_restrictions.keys():
         return [True,""]
     else:
