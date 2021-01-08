@@ -16,21 +16,18 @@ career_mode_airtable = Airtable(os.getenv("CAREER_MODE_BASE_ID"), 'Career Mode P
 
 def get_routes():
     routes = route_sets_airtable.get_all()
-    route_list = []
-    for item in routes:
-        route_list.append(item["fields"])
-    return route_list
+    return routes
 
 
 def get_pilot_data(callsign):
     routes = career_mode_airtable.get_all()
     for item in routes:
         if callsign.upper() in item["fields"]["Callsign"].upper():
-            return item["fields"]
+            return item
     return {}
 
 
-def get_possible_routes(aircraft, hub, routes):
+def get_possible_routes(aircraft, hub, routes, airline):
     possible_routes = []
     for route in routes:
         if route["Aircraft"] == aircraft and route["Hub"] == hub:
@@ -39,6 +36,8 @@ def get_possible_routes(aircraft, hub, routes):
 
 
 def get_next_routes(assigned_route, routes):
+    print(assigned_route)
+    print(routes)
     route_index = 0
     while route_index < len(routes):
         index = 0
@@ -56,8 +55,8 @@ def assign_routes_to_pilot(callsign, aircraft, hub):
     possible_routes = get_possible_routes(aircraft, hub, routes)
 
     pilot_data = get_pilot_data(callsign)
-    new_routes = get_next_routes()
-    pass
+    new_routes = get_next_routes(pilot_data["Assigned Routes"], possible_routes)
+    print(new_routes)
 
 
-assign_routes_to_pilot("AFKLM012", "B777", "EHAM")
+

@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 import csv
 import math
+import airtable_connection
 
 env = load_dotenv(dotenv_path="./.env")
 
@@ -144,6 +145,48 @@ def get_live_mobile():
     responses.append(response_string + "\n```")
     return responses
 
+
+def get_active_ifatc(session_id):
+    params = {"Authorization": "Bearer " + api_key}
+    flights = (requests.get(url=base_url + "atc/" + session_id, headers=params))
+    return (flights.json())["result"]
+
+
+def get_afklm_ifatc():
+    session_id = get_session_id()
+    ifatc = get_active_ifatc(session_id)
+    pilots = airtable_connection.get_afklm_pilots()
+    active_pilots = "```"
+    pilot_string = "\nIFC Username: {}\nAirport: {} \n"
+    for atc in ifatc:
+        for pilot in pilots:
+            if atc["username"].upper() == pilot.upper():
+                active_pilots = active_pilots + "-----------------" + pilot_string.format(atc["username"],
+                                                                                          atc["airportName"])
+    if active_pilots == "```":
+        return "```\nNo active AFKLM ATC found\n```"
+    return active_pilots + "```"
+
+
+def get_ifatc():
+    session_id = get_session_id()
+    ifatc = get_active_ifatc(session_id)
+    active_pilots = "```"
+    pilot_string = "\nIFC Username: {}\nAirport: {} \n"
+    for atc in ifatc:
+        active_pilots = active_pilots + "-----------------" + pilot_string.format(atc["username"],
+                                                                                  atc["airportName"])
+    if active_pilots == "```":
+        return "```\nNo active ATC found\n```"
+    return active_pilots + "```"
+
+def get_learn_url(args):
+    learn_commands = bot_controls["learn"]
+    learn_keys = learn_commands.keys()
+    for key in learn_keys:
+        if key.upper() in args.upper():
+            return [learn_commands[key], learn_commands]
+    return ["",learn_keys]
 
 def get_help():
     return "Not Implemented yet"

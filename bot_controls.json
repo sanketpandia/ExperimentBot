@@ -1,3 +1,8 @@
 {
-  "aircraft_livery_csv": ["20.02.csv", "20.03.csv"]
+  "aircraft_livery_csv": ["20.02.csv", "20.03.csv"],
+  "learn": {
+    "metar": "https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG",
+    "checklists": "https://1drv.ms/b/s!AhDpGlu1NeuigQUQIRHeuwy7ydOm?e=hgqO7K"
+  }
+
 }

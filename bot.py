@@ -264,19 +264,38 @@ async def get_live_flights_mobile(ctx):
 
 @client.command(name="learn")
 async def get_learn_metar(ctx, args):
-    if args.upper() == "METAR":
-        await ctx.author.send("https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG")
+    get_url = utils.get_learn_url(args)
+    if get_url[0] == "":
+        await ctx.send(
+            "```\nSorry we don't have this command. Available commands are: " + ', '.join(get_url[1]) + "\n```")
     else:
-        await ctx.send("Try using >learn metar")
+        await ctx.send(
+            "```\nI have DMed you the document.\n You can use these commands too: " + ', '.join(get_url[1]) + "\n```")
+        await ctx.author.send(get_url[0])
+
 
 @client.command(name="wt3")
-async def get_learn_metar(ctx, args):
+async def get_world_tour(ctx, args):
     if args.upper() == "WEBSITE":
         await ctx.author.send("https://www.if-airfranceklmva.com/worldtour-383119.html")
     elif args.upper() == "ROUTES":
         await ctx.author.send("https://airtable.com/shrFU6ORS5fazxMOA")
     else:
         await ctx.send("Try using >wt3 routes or >wt3 website")
+
+
+@client.command(name="ifatc_afklm")
+async def get_live_flights_mobile(ctx):
+    flightlines = utils.get_afklm_ifatc()
+
+    await ctx.send(flightlines)
+
+
+@client.command(name="ifatc")
+async def get_live_flights_mobile(ctx):
+    flightlines = utils.get_ifatc()
+
+    await ctx.send(flightlines)
 
 
 client.run(os.getenv("BOT_ID"))

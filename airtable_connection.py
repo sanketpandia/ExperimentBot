@@ -62,3 +62,13 @@ def get_time(callsign):
         resultant = fun_text + answer_string.format(cm_hours, required_hours, last_active_date.date())
     return resultant
 
+
+def get_afklm_pilots():
+    airtable_pilot = Airtable(os.getenv("BASE_ID"), 'All Pilots', os.getenv("JOHN_AIRTABLE_ID"))
+    data = airtable_pilot.get_all()
+    pilots = []
+    for item in data:
+        if "IFC Name" in item["fields"].keys():
+            pilots.append(item["fields"]["IFC Name"])
+    return pilots
+
