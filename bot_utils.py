@@ -160,7 +160,7 @@ def get_afklm_ifatc():
     pilot_string = "\nIFC Username: {}\nAirport: {} \n"
     for atc in ifatc:
         for pilot in pilots:
-            if atc["username"].upper() == pilot.upper():
+            if atc["username"].upper() in pilot.upper():
                 active_pilots = active_pilots + "-----------------" + pilot_string.format(atc["username"],
                                                                                           atc["airportName"])
     if active_pilots == "```":
