@@ -536,7 +536,7 @@ async def acars_pirep(ctx):
             pirep_data["Pilot Remarks"] = msg.content + "\n~ Filled with the AFKLM bot.~"
         del pirep_data["Special Routes"]
         ft_hr = str(int(pirep_data["Flight Time"]/3600))
-        ft_mn = str(int(pirep_data["Flight Time"]%3600))
+        ft_mn = str(int(pirep_data["Flight Time"]%3600*60))
         callsign = pirep_data["Callsign"]
         pirep_data["Callsign"] = callsign["callsign"]
         await ctx.send("Your log is ready. Verify the deets and type confirm to file it. Else you may type No\nYour "
