@@ -336,6 +336,9 @@ def get_acars(callsign):
     callsign_number = get_callsign_number(callsign)
     callsign = "AFKLM" + str(get_callsign_number(callsign))
     flight = get_user_flight(callsign_number)
+    print(type(flight))
+    if isinstance(flight, str):
+        return flight
     if flight["username"] is None:
         flight["username"] = ""
     aircraft_list = load_csv()

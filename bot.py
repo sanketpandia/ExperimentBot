@@ -396,6 +396,10 @@ async def prep_my_flight(ctx):
 async def acars_pirep(ctx):
     print(ctx.message.author.display_name)
     pirep_data = utils.get_acars(ctx.message.author.display_name)
+    if isinstance(pirep_data,str):
+        await ctx.send("Make sure you are on the expert server with a flight plan! Also make sure your Discord Display Name "
+                 "has your callsign in it")
+        return
     option_string = "Send {} for {}\n"
     # await ctx.send("The current data I have are as follows\n "+ json.dumps(pirep_data, indent=4))
     if len(pirep_data.keys()) <= 1:
