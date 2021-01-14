@@ -74,13 +74,13 @@ def format_string(text, limit):
 
 def get_flight_plans_and_flights():
     session_id = get_session_id()
+    fpl = get_fpl(session_id)
     if session_id == "":
         return ""
     flights = get_flights(session_id)
 
     aircraft_list = load_csv()
 
-    fpl = get_fpl(session_id)
     afklm_flights = []
     live_flight_ids = []
     pattern = re.compile("\D*\d\d\dAK")
@@ -233,8 +233,6 @@ def get_user_flight(callsign):
         return ""
     flights = get_flights(session_id)
 
-    aircraft_list = load_csv()
-
     pattern = re.compile("\D*" + callsign + "AK")
     for flight in flights:
         if pattern.match(flight["callsign"]):
@@ -263,7 +261,7 @@ def get_aircraft_checklist_files(airframe):
     return files
 
 
-def get_user_current_flight(callsign):
+def get_user_current_flight_checklist(callsign):
     callsign_number = get_callsign_number(callsign)
     flight = get_user_flight(callsign_number)
 
@@ -274,3 +272,102 @@ def get_user_current_flight(callsign):
             aircraft_checklists = get_aircraft_checklist_files(aircraft["AircraftName"])
 
     return aircraft_checklists
+
+
+def get_pirep_json(field, key):
+    with open("./pirep_configs.json") as pirep_f:
+        pirep_configs = json.load(pirep_f)
+    if key in pirep_configs[field]:
+        return pirep_configs[field][key]
+    return pirep_configs[field]["Other"]
+
+def get_route_id(route):
+    with open("./routes_check.json", "r") as routes_f:
+        routes = json.load(routes_f)
+    received_route = route.replace(" ", "")
+    for route in routes:
+        current_route = route["route"].replace(" ", "")
+        if current_route.upper() == received_route.upper():
+            return route["id"]
+    return "Invalid route. Check with airtable and try again"
+
+def get_pirep_configs(key):
+    with open("./pirep_configs.json") as pirep_f:
+        pirep_configs = json.load(pirep_f)
+    return pirep_configs[key]
+
+def validate_callsign(callsign):
+    with open("./pilot_list.json", "r") as pilot_f:
+        pilots = json.load(pilot_f)
+    callsign = callsign.replace(" ", "")
+    for pilot in pilots:
+        current_pilot = pilot["callsign"].replace(" ","")
+        if current_pilot == callsign:
+            return pilot
+    return {}
+
+def validate_route(received_route):
+    with open("./routes_check.json", "r") as routes_f:
+        routes = json.load(routes_f)
+    received_route = received_route.replace(" ", "")
+    for route in routes:
+        current_route = route["route"].replace(" ", "")
+        print(current_route + "\t\t" + received_route)
+        if current_route.upper() in received_route.upper():
+            return route
+    return {}
+
+def get_ft_from_string(ft_string):
+    try:
+        split_str = ft_string.split(':')
+        hrs_secs = int(split_str[0]) * 3600
+        mm_secs = int(split_str[1]) * 60
+        return hrs_secs + mm_secs
+    except Exception as e:
+        return 0
+
+def get_spl_routes():
+    with open("./pirep_configs.json", "r") as pirep_f:
+        configs = json.load(pirep_f)
+    return configs["Special Routes"]
+
+
+def get_acars(callsign):
+    callsign_number = get_callsign_number(callsign)
+    callsign = "AFKLM" + str(get_callsign_number(callsign))
+    flight = get_user_flight(callsign_number)
+    if flight["username"] is None:
+        flight["username"] = ""
+    aircraft_list = load_csv()
+    for aircraft in aircraft_list:
+        if flight["aircraftId"] == aircraft["AircraftId"] and flight["liveryId"] == aircraft["LiveryId"]:
+            flight["aircraft"] = aircraft["AircraftName"]
+            flight["livery"] = aircraft["LiveryName"]
+
+            flight["altitude"] = str(math.ceil(float(flight["altitude"]) / 100) * 100)
+            flight["speed"] = str(math.ceil(float(flight["speed"])))
+
+    session_id = get_session_id()
+    fpl = get_fpl(session_id)
+    flight["route"] = get_fpl_by_id(fpl, flight["flightId"])
+    flight["AFKLM_Callsign"] = callsign
+    pirep = {"Callsign": validate_callsign(callsign),
+             "Aircraft": get_pirep_json("AircraftMappings", flight["aircraft"]),
+             "Airline": get_pirep_json("AirlineMappings", flight["livery"]),
+             "Route": validate_route(flight["route"]),
+             "Flight Mode": get_pirep_configs("Flight Modes"),
+             "Flight Time": 0,
+             "What is your IFC Username?": flight["username"],
+             "Pilot Region": get_pirep_configs("Pilot Regions"),
+             "Pilot Remarks": ""}
+    spl_routes = get_spl_routes()
+    routes_spl = []
+    for key in spl_routes.keys():
+        routes_spl.append({
+            "id": spl_routes[key],
+            "route": key
+        })
+
+    pirep["Special Routes"] = routes_spl
+
+    return pirep

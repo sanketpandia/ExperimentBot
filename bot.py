@@ -362,6 +362,7 @@ async def get_live_ifatc(ctx):
 
     await ctx.send(flightlines)
 
+
 @client.command()
 async def afklm_help(ctx):
     role_names = [role.name for role in ctx.author.roles]
@@ -372,26 +373,189 @@ async def afklm_help(ctx):
         await ctx.send(help_response[0])
         await ctx.author.send(help_response[1])
 
+
 @client.command()
 async def prep_my_flight(ctx):
     print(ctx.message.author.display_name)
-    checklist_files = utils.get_user_current_flight(ctx.message.author.display_name)
+    checklist_files = utils.get_user_current_flight_checklist(ctx.message.author.display_name)
     if len(checklist_files) <= 1:
         await ctx.send("***Sorry we don't have the checklist for " + checklist_files[0] + ". May the force be with "
                                                                                           "you!!***")
     else:
-        await ctx.send("***I have DMed you the checklists for "+ checklist_files[0] + "***")
+        await ctx.send("***I have DMed you the checklists for " + checklist_files[0] + "***")
         first_flag = True
         for file_name in checklist_files:
             if first_flag:
                 first_flag = False
                 continue
-            with open('./checklists/'+file_name, 'rb') as fp:
+            with open('./checklists/' + file_name, 'rb') as fp:
                 await ctx.author.send(file=discord.File(fp, file_name))
 
 
 @client.command()
-async def file_pirep( ctx, number: int = 1):
+async def acars_pirep(ctx):
+    print(ctx.message.author.display_name)
+    pirep_data = utils.get_acars(ctx.message.author.display_name)
+    option_string = "Send {} for {}\n"
+    # await ctx.send("The current data I have are as follows\n "+ json.dumps(pirep_data, indent=4))
+    if len(pirep_data.keys()) <= 1:
+        await ctx.send("***Sorry I can't fetch your ACARS data. May the force be with "
+                       "you!!***")
+        return
+    else:
+        flight_mode_response = "Please type your messages/ replies within 30 secs. \nHello " + pirep_data["Callsign"][
+            "callsign"] + ", What was your Flight mode? Choose " \
+                          "from the list " \
+                          "below:\n "
+        flight_mode_flag = False
+        while not flight_mode_flag:
+            flight_mode_message = "What was your Flight mode? Choose " \
+                                  "from the list " \
+                                  "below:\n "
+            for i in range(len(pirep_data["Flight Mode"])):
+                flight_mode_response = flight_mode_response + option_string.format(i + 1, pirep_data["Flight Mode"][i])
+            await ctx.send(flight_mode_response)
+            msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+            if msg.content.isnumeric() and int(msg.content)<= len(pirep_data["Flight Mode"]):
+                pirep_data["Flight Mode"] = pirep_data["Flight Mode"][int(msg.content) - 1]
+                flight_mode_flag = True
+            elif msg.content.upper() == "EXIT":
+                await ctx.send("Sorry to see you go")
+                return
+
+        if len(pirep_data["Route"].keys()) == 0:
+            route_flag = False
+            while not route_flag:
+                route_response = "Your route couldn't be validated. You can try to enter the route here in the format " \
+                                 "SCEL-EHAM. Or you may choose any of the special routes below\n "
+                for i in range(len(pirep_data["Special Routes"])):
+                    route_response = route_response + option_string.format(i + 1, pirep_data["Special Routes"][i])
+                await ctx.send(route_response)
+                msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+                if msg.content.isnumeric():
+                    response = int(msg.content)
+                    if response > len(pirep_data["Special Routes"]):
+                        await ctx.send("You sure you entered the right response?\n Try again!")
+                    else:
+                        pirep_data["Route"] = pirep_data["Special Routes"][int(msg.content) - 1]
+                elif msg.content.upper() == "EXIT":
+                    await ctx.send("Sorry to see you go")
+                    return
+                else:
+                    pirep_data["Route"] = utils.validate_route(msg.content)
+                    if len(pirep_data["Route"].keys()) > 0:
+                        route_flag = True
+        else:
+
+            route_response = "Was your route " + pirep_data["Route"][
+                "route"] + " or any of the special routes below? Reply yes " \
+                           "to confirm if it was your route\n "
+            for i in range(len(pirep_data["Special Routes"])):
+                route_response = route_response + option_string.format(i + 1, pirep_data["Special Routes"][i]["route"])
+            await ctx.send(route_response)
+            msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+            if msg.content.isnumeric():
+                response = int(msg.content)
+                if response > len(pirep_data["Special Routes"]):
+                    await ctx.send("You sure you entered the right response?\n Try again!")
+                elif msg.content.upper() == "EXIT":
+                    await ctx.send("Sorry to see you go")
+                    return
+                else:
+                    pirep_data["Route"] = pirep_data["Special Routes"][int(msg.content) - 1]
+                    await ctx.send("Your route was validated")
+            elif msg.content.upper() == "YES":
+                await ctx.send("Your route was validated")
+            elif msg.content.upper() == "EXIT":
+                await ctx.send("Sorry to see you go")
+                return
+            elif msg.content.upper() == "NO":
+                route_flag = False
+                while not route_flag:
+                    await ctx.send("**Enter your route**:")
+                    msg = await client.wait_for('message', check=lambda message: message.author == ctx.author,
+                                                timeout=30)
+                    pirep_data["Route"] = utils.validate_route(msg.content)
+                    if len(pirep_data["Route"].keys()) > 0:
+                        await ctx.send(
+                            "The route you selected is **" + pirep_data["Route"]["route"] + "**. Do you agree?")
+                        msg = await client.wait_for('message', check=lambda message: message.author == ctx.author,
+                                                    timeout=30)
+                        if msg.content.upper() == "YES":
+                            route_flag = True
+
+        time_flag = False
+        while not time_flag:
+            await ctx.send("What was your flight time? Enter in hh:mm format")
+            msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+            if msg.content.upper() == "EXIT":
+                await ctx.send("Sorry to see you go")
+                return
+            ft = utils.get_ft_from_string(msg.content)
+            if ft == 0:
+                await ctx.send("You sure you entered it right?")
+            else:
+                pirep_data["Flight Time"] = ft
+                time_flag = True
+        region_flag = False
+        while not region_flag:
+            region_response = "What is your flight region? Choose from the below options\n"
+            for i in range(len(pirep_data["Pilot Region"])):
+                region_response = region_response + option_string.format(i + 1, pirep_data["Pilot Region"][i])
+            await ctx.send(region_response)
+            msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+            if msg.content.isnumeric():
+                response = int(msg.content)
+                if response > len(pirep_data["Pilot Region"]):
+                    await ctx.send("You sure you entered the right response?\n Try again!")
+                else:
+                    pirep_data["Pilot Region"] = pirep_data["Pilot Region"][int(msg.content) - 1]
+                    region_flag = True
+            elif msg.content.upper() == "EXIT":
+                await ctx.send("Sorry to see you go")
+                return
+            else:
+                ctx.send("Make sure to enter a number please!")
+        ifc_id_flag = False
+        while not ifc_id_flag:
+            if pirep_data["What is your IFC Username?"] == "":
+                await ctx.send("What is your IFC id? Please make sure you have it correct before hitting send!")
+                msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+                pirep_data["What is your IFC Username?"] = msg.content
+                ifc_id_flag = True
+            elif msg.content.upper() == "EXIT":
+                await ctx.send("Sorry to see you go")
+                return
+            else:
+                ifc_id_flag = True
+        await ctx.send("Do you have any remarks? If yes type them and hit enter. Otherwise type No and hit enter")
+        msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+        if msg.content.upper() == "NO":
+            pirep_data["Pilot Remarks"] = "\n~ Filled with the AFKLM bot.~"
+        else:
+            pirep_data["Pilot Remarks"] = msg.content + "\n~ Filled with the AFKLM bot.~"
+        del pirep_data["Special Routes"]
+        callsign = pirep_data["Callsign"]
+        pirep_data["Callsign"] = callsign["callsign"]
+        await ctx.send("Your log is ready. Verify the deets and type confirm to file it. Else you may type No\nYour "
+                       "details are as follows:\n" + json.dumps(pirep_data, indent=4))
+        msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
+        if msg.content.strip().upper() == "CONFIRM":
+            pirep_data["Callsign"] = [callsign["id"]]
+            airtable_connection.file_pirep(pirep_data)
+            await ctx.send("Your log has been successfully filed")
+        elif msg.content.strip().upper() == "NO":
+            await ctx.send("Sorry your log could not be filed.")
+
+
+@client.command()
+async def update_routes(ctx):
+    await ctx.send("Routes are syncing with airtable. This should not take more than a minute")
+    airtable_connection.refresh_routes()
+
+
+@client.command()
+async def file_pirep(ctx, number: int = 1):
     """Show the provided challenge number."""
 
     embed = discord.Embed(
