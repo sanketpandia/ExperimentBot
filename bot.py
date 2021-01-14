@@ -416,7 +416,7 @@ async def acars_pirep(ctx):
                 flight_mode_response = flight_mode_response + option_string.format(i + 1, pirep_data["Flight Mode"][i])
             await ctx.send(flight_mode_response)
             msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
-            if msg.content.isnumeric() and int(msg.content)<= len(pirep_data["Flight Mode"]):
+            if msg.content.isnumeric() and int(msg.content) <= len(pirep_data["Flight Mode"]):
                 pirep_data["Flight Mode"] = pirep_data["Flight Mode"][int(msg.content) - 1]
                 flight_mode_flag = True
             elif msg.content.upper() == "EXIT":
@@ -538,7 +538,12 @@ async def acars_pirep(ctx):
         callsign = pirep_data["Callsign"]
         pirep_data["Callsign"] = callsign["callsign"]
         await ctx.send("Your log is ready. Verify the deets and type confirm to file it. Else you may type No\nYour "
-                       "details are as follows:\n" + json.dumps(pirep_data, indent=4))
+                       "details are as follows:\n **Callsign**: {}\n**Route**: {}\n**Flight Mode**: {}\n**Flight "
+                       "Time**:{}\n**Aircraft**: {}\n**Airline**: {}\n**IFC Username**: {}\n**Pilot Remarks**: {}".format(
+            pirep_data["Callsign"], pirep_data["Route"]["route"], pirep_data["Flight Mode"], pirep_data["Flight Time"],
+            pirep_data["Aircraft"], pirep_data["Airline"], pirep_data["What is your IFC Username?"],
+            pirep_data["Pilot Remarks"]
+        ))
         msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
         if msg.content.strip().upper() == "CONFIRM":
             pirep_data["Callsign"] = [callsign["id"]]
