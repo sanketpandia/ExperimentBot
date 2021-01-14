@@ -2,7 +2,8 @@
   "aircraft_livery_csv": ["20.02.csv", "20.03.csv"],
   "learn": {
     "metar": "https://1drv.ms/b/s!AhDpGlu1NeuigQMsPxUEZhgrQPTU?e=udAQqG",
-    "checklists": "https://1drv.ms/b/s!AhDpGlu1NeuigQUQIRHeuwy7ydOm?e=hgqO7K"
+    "checklists": "https://1drv.ms/b/s!AhDpGlu1NeuigQUQIRHeuwy7ydOm?e=hgqO7K",
+    "aircraft_profiles": "https://community.infiniteflight.com/t/all-aircraft-takeoff-and-landing-profiles-my-new-topic-version-20-2-wiki/441564"
   },
   "adminRoles": ["@staff", "@flightinstructor", "@cxo", "@events"],
   "help": [
