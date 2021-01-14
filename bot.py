@@ -377,7 +377,8 @@ async def prep_my_flight(ctx):
     print(ctx.message.author.display_name)
     checklist_files = utils.get_user_current_flight(ctx.message.author.display_name)
     if len(checklist_files) <= 1:
-        await ctx.send("***Sorry we don't have the checklist for " + checklist_files[0] + "***")
+        await ctx.send("***Sorry we don't have the checklist for " + checklist_files[0] + ". May the force be with "
+                                                                                          "you!!***")
     else:
         await ctx.send("***I have DMed you the checklists for "+ checklist_files[0] + "***")
         first_flag = True
