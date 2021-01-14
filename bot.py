@@ -543,7 +543,7 @@ async def acars_pirep(ctx):
         ft_mn = str(int(pirep_data["Flight Time"]%3600*60))
         callsign = pirep_data["Callsign"]
         pirep_data["Callsign"] = callsign["callsign"]
-        await ctx.send("Your log is ready. Verify the deets and type confirm to file it. Else you may type No\nYour "
+        await ctx.send("Your log is ready. Verify the deets and type ***confirm*** to file it. Else you may type No\nYour "
                        "details are as follows:\n **Callsign**: {}\n**Route**: {}\n**Flight Mode**: {}\n**Flight "
                        "Time**:{}\n**Aircraft**: {}\n**Airline**: {}\n**IFC Username**: {}\n**Pilot Remarks**: {}".format(
             pirep_data["Callsign"], pirep_data["Route"]["route"], pirep_data["Flight Mode"], ft,
