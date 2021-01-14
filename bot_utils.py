@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 import csv
 import math
 import airtable_connection
+from os import walk
+from os import listdir
+from os.path import isfile, join
 
 env = load_dotenv(dotenv_path="./.env")
 
@@ -158,9 +161,10 @@ def get_afklm_ifatc():
     pilots = airtable_connection.get_afklm_pilots()
     active_pilots = "```"
     pilot_string = "\nIFC Username: {}\nAirport: {} \n"
+    print(pilots)
     for atc in ifatc:
         for pilot in pilots:
-            if atc["username"].upper() == pilot.upper():
+            if atc["username"].strip().upper() == pilot.strip().upper():
                 active_pilots = active_pilots + "-----------------" + pilot_string.format(atc["username"],
                                                                                           atc["airportName"])
     if active_pilots == "```":
@@ -210,7 +214,7 @@ def validate_role(command, user_role):
     role_restrictions = bot_controls["role_restrict"]
     admin_flag = False
     if command not in role_restrictions.keys():
-        return [True,""]
+        return [True, ""]
     else:
         for admin in role_restrictions[command]:
             if admin in user_role:
@@ -219,4 +223,54 @@ def validate_role(command, user_role):
             return [True, ""]
         else:
 
-            return [False, "\nYou don't have the required authorisation. You need to have the role of " + " or ".join(role_restrictions[command]) + " to be able to use these commands"]
+            return [False, "\nYou don't have the required authorisation. You need to have the role of " + " or ".join(
+                role_restrictions[command]) + " to be able to use these commands"]
+
+
+def get_user_flight(callsign):
+    session_id = get_session_id()
+    if session_id == "":
+        return ""
+    flights = get_flights(session_id)
+
+    aircraft_list = load_csv()
+
+    pattern = re.compile("\D*" + callsign + "AK")
+    for flight in flights:
+        if pattern.match(flight["callsign"]):
+            return flight
+
+    return "Nothing found. Something broke"
+
+
+def get_callsign_number(callsign):
+    x = re.search("\D*AFKLM(\d\d\d)", callsign)
+    found = x.group(1)
+    return found
+
+
+def recognise_aircraft():
+    for file in os.listdir("./checklists"):
+        if os.path.isfile(os.path.join("./checklists", file)):
+            yield file
+
+
+def get_aircraft_checklist_files(airframe):
+    files = [airframe]
+    for file in recognise_aircraft():
+        if file.startswith(airframe):
+            files.append(file)
+    return files
+
+
+def get_user_current_flight(callsign):
+    callsign_number = get_callsign_number(callsign)
+    flight = get_user_flight(callsign_number)
+
+    aircraft_list = load_csv()
+    aircraft_checklists = []
+    for aircraft in aircraft_list:
+        if flight["aircraftId"] == aircraft["AircraftId"] and flight["liveryId"] == aircraft["LiveryId"]:
+            aircraft_checklists = get_aircraft_checklist_files(aircraft["AircraftName"])
+
+    return aircraft_checklists

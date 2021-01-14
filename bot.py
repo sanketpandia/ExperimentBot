@@ -350,14 +350,14 @@ async def get_world_tour(ctx, args):
 
 
 @client.command(name="ifatc_afklm")
-async def get_live_flights_mobile(ctx):
+async def get_live_ifatc_afklm(ctx):
     flightlines = utils.get_afklm_ifatc()
 
     await ctx.send(flightlines)
 
 
 @client.command(name="ifatc")
-async def get_live_flights_mobile(ctx):
+async def get_live_ifatc(ctx):
     flightlines = utils.get_ifatc()
 
     await ctx.send(flightlines)
@@ -371,6 +371,44 @@ async def afklm_help(ctx):
     else:
         await ctx.send(help_response[0])
         await ctx.author.send(help_response[1])
+
+@client.command()
+async def prep_my_flight(ctx):
+    print(ctx.message.author.display_name)
+    checklist_files = utils.get_user_current_flight(ctx.message.author.display_name)
+    if len(checklist_files) <= 1:
+        await ctx.send("***Sorry we don't have the checklist for " + checklist_files[0] + "***")
+    else:
+        await ctx.send("***I have DMed you the checklists for "+ checklist_files[0] + "***")
+        first_flag = True
+        for file_name in checklist_files:
+            if first_flag:
+                first_flag = False
+                continue
+            with open('./checklists/'+file_name, 'rb') as fp:
+                await ctx.author.send(file=discord.File(fp, file_name))
+
+
+@client.command()
+async def file_pirep( ctx, number: int = 1):
+    """Show the provided challenge number."""
+
+    embed = discord.Embed(
+        title="Testing the embed command",
+        colour=discord.Colour(0xE5E242),
+        url="https://airtable.com/shru5XYHBMx1rnvVA",
+        description="To file a pirep",
+    )
+
+    embed.set_image(url="https://www.airfranceklm.com/sites/all/themes/afklm/images/logo.png")
+    embed.set_thumbnail(
+        url="https://www.airfranceklm.com/sites/all/themes/afklm/images/logo.png"
+    )
+    embed.set_author(name="The Experiment")
+    embed.set_footer(
+        text=f"File Pirep thing test by Sanket"
+    )
+    return await ctx.send(embed=embed)
 
 
 client.run(os.getenv("BOT_ID"))
