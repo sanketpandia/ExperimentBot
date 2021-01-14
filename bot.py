@@ -447,8 +447,8 @@ async def acars_pirep(ctx):
                         route_flag = True
         else:
 
-            route_response = "Was your route " + pirep_data["Route"][
-                "route"] + " or any of the special routes below? Reply yes " \
+            route_response = "Was your route **" + pirep_data["Route"][
+                "route"] + "** or any of the special routes below? Reply ***YES*** " \
                            "to confirm if it was your route\n "
             for i in range(len(pirep_data["Special Routes"])):
                 route_response = route_response + option_string.format(i + 1, pirep_data["Special Routes"][i]["route"])
@@ -486,7 +486,7 @@ async def acars_pirep(ctx):
 
         time_flag = False
         while not time_flag:
-            await ctx.send("What was your flight time? Enter in hh:mm format")
+            await ctx.send("What was your flight time? Enter in **hh:mm** format")
             msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
             if msg.content.upper() == "EXIT":
                 await ctx.send("Sorry to see you go")
