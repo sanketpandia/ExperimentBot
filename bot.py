@@ -433,7 +433,7 @@ async def acars_pirep(ctx):
                 route_response = "Your route couldn't be validated. You can try to enter the route here in the format " \
                                  "SCEL-EHAM. Or you may choose any of the special routes below\n "
                 for i in range(len(pirep_data["Special Routes"])):
-                    route_response = route_response + option_string.format(i + 1, pirep_data["Special Routes"][i])
+                    route_response = route_response + option_string.format(i + 1, pirep_data["Special Routes"][i]["route"])
                 await ctx.send(route_response)
                 msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
                 if msg.content.isnumeric():
