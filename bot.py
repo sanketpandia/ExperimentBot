@@ -7,6 +7,7 @@ import cmflight_instructors as cm
 import bot_utils as utils
 import pilot_academy as pa
 import event_code as event
+import time
 
 env = load_dotenv(dotenv_path="./.env")
 
@@ -402,6 +403,7 @@ async def acars_pirep(ctx):
         return
     option_string = "Send {} for {}\n"
     # await ctx.send("The current data I have are as follows\n "+ json.dumps(pirep_data, indent=4))
+    multiplier = 1.0
     if len(pirep_data.keys()) <= 1:
         await ctx.send("***Sorry I can't fetch your ACARS data. May the force be with "
                        "you!!***")
@@ -442,6 +444,9 @@ async def acars_pirep(ctx):
                         await ctx.send("You sure you entered the right response?\n Try again!")
                     else:
                         pirep_data["Route"] = pirep_data["Special Routes"][int(msg.content) - 1]
+                        multiplier = float(pirep_data["Route"]["route"].split("/")[1])
+                        pirep_data["Route"]["route"] = pirep_data["Route"]["route"].split("/")[0]
+                        await ctx.send("Your route was validated")
                 elif msg.content.upper() == "EXIT":
                     await ctx.send("Sorry to see you go")
                     return
@@ -467,6 +472,8 @@ async def acars_pirep(ctx):
                     return
                 else:
                     pirep_data["Route"] = pirep_data["Special Routes"][int(msg.content) - 1]
+                    multiplier = float(pirep_data["Route"]["route"].split("/")[1])
+                    pirep_data["Route"]["route"]  = pirep_data["Route"]["route"].split("/")[0]
                     await ctx.send("Your route was validated")
             elif msg.content.upper() == "YES":
                 await ctx.send("Your route was validated")
@@ -490,12 +497,12 @@ async def acars_pirep(ctx):
 
         time_flag = False
         while not time_flag:
-            await ctx.send("What was your flight time? Enter in **hh:mm** format")
+            await ctx.send("What was your flight time? Enter in **hh:mm** format. ***Multiplier automatically added***")
             msg = await client.wait_for('message', check=lambda message: message.author == ctx.author, timeout=30)
             if msg.content.upper() == "EXIT":
                 await ctx.send("Sorry to see you go")
                 return
-            ft = utils.get_ft_from_string(msg.content)
+            ft = utils.get_ft_from_string(msg.content)*multiplier
             if ft == 0:
                 await ctx.send("You sure you entered it right?")
             else:
@@ -543,10 +550,11 @@ async def acars_pirep(ctx):
         ft_mn = str(int(pirep_data["Flight Time"]%3600*60))
         callsign = pirep_data["Callsign"]
         pirep_data["Callsign"] = callsign["callsign"]
+        flight_time_string = str(time.strftime('%H:%M', time.gmtime(ft)))
         await ctx.send("Your log is ready. Verify the deets and type ***confirm*** to file it. Else you may type No\nYour "
                        "details are as follows:\n **Callsign**: {}\n**Route**: {}\n**Flight Mode**: {}\n**Flight "
                        "Time**:{}\n**Aircraft**: {}\n**Airline**: {}\n**IFC Username**: {}\n**Pilot Remarks**: {}".format(
-            pirep_data["Callsign"], pirep_data["Route"]["route"], pirep_data["Flight Mode"], ft,
+            pirep_data["Callsign"], pirep_data["Route"]["route"], pirep_data["Flight Mode"], flight_time_string,
             pirep_data["Aircraft"], pirep_data["Airline"], pirep_data["What is your IFC Username?"],
             pirep_data["Pilot Remarks"]
         ))
