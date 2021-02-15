@@ -317,7 +317,7 @@ async def get_live_flights(ctx):
         await ctx.send(flightlines)
 
 
-@client.command(name="live")
+@client.command(name="live_deprecated")
 async def get_live_flights_mobile(ctx):
     flightlines = utils.get_live_mobile()
 
@@ -357,7 +357,7 @@ async def get_live_ifatc_afklm(ctx):
     await ctx.send(flightlines)
 
 
-@client.command(name="ifatc")
+@client.command(name="ifatc_deprecated")
 async def get_live_ifatc(ctx):
     flightlines = utils.get_ifatc()
 
@@ -571,6 +571,14 @@ async def acars_pirep(ctx):
 async def update_routes(ctx):
     await ctx.send("Routes are syncing with airtable. This should not take more than a minute")
     airtable_connection.refresh_routes()
+
+@client.command()
+async def wish_lawin(ctx):
+    members = ctx.guild.members
+    for member in members:
+        print(member)
+    async for member in ctx.guild.fetch_members(limit=None):
+        print("{},{}".format(member, member.id) )
 
 
 @client.command()
